@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #f0c04a; text-decoration: none; }
+    a:hover { color: #f7d67e; }
+    .display { font-family: "Anton", "Archivo Black", Impact, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.005em; }
+    .kicker { font: 700 12px/1 "Archivo", system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #f2ece1; color: #241a18; font-family: 'Archivo', system-ui, sans-serif;">
+
+  <!-- nav -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 64px; background: #6e2b26; color: #f2ece1;">
+    <div class="display" style="font-size: 20px;">Agentic Crafters</div>
+    <div class="kicker" style="display: flex; gap: 30px;">
+      <a href="#" style="color: #f2ece1;">Episodes</a>
+      <a href="#" style="color: #f2ece1;">About</a>
+      <a href="#" style="color: #f2ece1;">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="background: #6e2b26; color: #f2ece1; padding: 72px 64px 88px;">
+    <div class="kicker" style="color: #f0c04a; margin-bottom: 40px;">A podcast on software and AI</div>
+    <h1 class="display" style="font-size: 132px; line-height: 0.9; margin: 0 0 40px; max-width: 1180px;">Where AI meets the reality of <span style="color: #f0c04a;">software development</span></h1>
+    <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px; align-items: end;">
+      <div style="grid-column: span 7;">
+        <p style="font-size: 22px; line-height: 1.5; margin: 0 0 16px; text-wrap: pretty;">AI is reshaping how we build software products. How are teams actually adapting?</p>
+        <p style="font-size: 16px; line-height: 1.65; color: #d3b8b3; margin: 0; text-wrap: pretty;">Arthur Magne and Yannick Grenzinger talk with the people living this transformation day to day — the practices, the organisational choices, the wins and the struggles.</p>
+      </div>
+      <div style="grid-column: span 5; display: flex; gap: 12px; justify-content: flex-end;">
+        <a href="#" class="kicker" style="display: flex; align-items: center; gap: 10px; background: #f0c04a; color: #241a18; padding: 18px 28px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M6 4l14 8-14 8V4z"/></svg>
+          Latest episode
+        </a>
+        <a href="#" class="kicker" style="padding: 18px 26px; border: 2px solid #a56862; color: #f2ece1;">Subscribe</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- what we explore -->
+  <div style="padding: 80px 64px 72px;">
+    <div class="display" style="font-size: 46px; margin-bottom: 44px;">What we explore</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2px; background: #241a18; border: 2px solid #241a18;">
+      <div style="background: #f2ece1; padding: 32px 30px 36px;"><div class="display" style="font-size: 52px; color: #6e2b26; line-height: 0.9; margin-bottom: 16px;">01</div><div style="font-size: 19px; font-weight: 700; margin-bottom: 8px;">How your teams actually use AI</div><div style="font-size: 15px; line-height: 1.6; color: #6a5b57;">Beyond the demos and the vendor decks — what people reach for on a Tuesday afternoon.</div></div>
+      <div style="background: #f2ece1; padding: 32px 30px 36px;"><div class="display" style="font-size: 52px; color: #6e2b26; line-height: 0.9; margin-bottom: 16px;">02</div><div style="font-size: 19px; font-weight: 700; margin-bottom: 8px;">What it changes in how you organise</div><div style="font-size: 15px; line-height: 1.6; color: #6a5b57;">Roles, rituals, the place of junior developers, who decides what.</div></div>
+      <div style="background: #f2ece1; padding: 32px 30px 36px;"><div class="display" style="font-size: 52px; color: #6e2b26; line-height: 0.9; margin-bottom: 16px;">03</div><div style="font-size: 19px; font-weight: 700; margin-bottom: 8px;">What happens to code quality</div><div style="font-size: 15px; line-height: 1.6; color: #6a5b57;">Review, tests, and the debt that does not show up for another two quarters.</div></div>
+      <div style="background: #f2ece1; padding: 32px 30px 36px;"><div class="display" style="font-size: 52px; color: #6e2b26; line-height: 0.9; margin-bottom: 16px;">04</div><div style="font-size: 19px; font-weight: 700; margin-bottom: 8px;">What actually reaches production</div><div style="font-size: 15px; line-height: 1.6; color: #6a5b57;">Delivered value, not generated lines. And how fast it gets there.</div></div>
+      <div style="background: #f2ece1; padding: 32px 30px 36px;"><div class="display" style="font-size: 52px; color: #6e2b26; line-height: 0.9; margin-bottom: 16px;">05</div><div style="font-size: 19px; font-weight: 700; margin-bottom: 8px;">What you measure</div><div style="font-size: 15px; line-height: 1.6; color: #6a5b57;">The numbers teams trust, and everything that still resists measurement.</div></div>
+      <div style="background: #241a18; color: #f2ece1; padding: 32px 30px 36px; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="kicker" style="color: #f0c04a;">Format</div>
+        <div style="font-size: 15px; line-height: 1.7;">~1 hour per episode · video and audio · French and English · a written summary and the full transcript, every time.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- episodes -->
+  <div style="padding: 0 64px 72px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 28px;">
+      <div class="display" style="font-size: 46px;">Episodes</div>
+      <a href="#" class="kicker" style="color: #6e2b26;">All episodes →</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 2px;">
+      <a href="#" style="display: grid; grid-template-columns: 130px 1fr 160px; gap: 28px; align-items: center; padding: 26px 30px; background: #e6ddce; color: inherit;">
+        <div class="display" style="font-size: 62px; color: #6e2b26; line-height: 0.85;">01</div>
+        <div>
+          <div style="font-size: 24px; font-weight: 700; line-height: 1.2; margin-bottom: 6px;">Shipping with agents without losing the codebase</div>
+          <div style="font-size: 15px; color: #6a5b57;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
+        </div>
+        <div class="kicker" style="text-align: right; color: #6a5b57; line-height: 2;">58 min<br>French</div>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 130px 1fr 160px; gap: 28px; align-items: center; padding: 26px 30px; background: #e6ddce; color: inherit;">
+        <div class="display" style="font-size: 62px; color: #6e2b26; line-height: 0.85;">02</div>
+        <div>
+          <div style="font-size: 24px; font-weight: 700; line-height: 1.2; margin-bottom: 6px;">Where junior developers fit now</div>
+          <div style="font-size: 15px; color: #6a5b57;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
+        </div>
+        <div class="kicker" style="text-align: right; color: #6a5b57; line-height: 2;">62 min<br>English</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- hosts -->
+  <div style="padding: 0 64px 80px;">
+    <div class="display" style="font-size: 46px; margin-bottom: 32px;">Your hosts</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px;">
+      <div style="display: flex; gap: 22px; align-items: center; background: #e6ddce; padding: 26px 30px;">
+        <div style="width: 72px; height: 72px; background: #6e2b26; flex-shrink: 0;"></div>
+        <div><div style="font-size: 22px; font-weight: 700;">Arthur Magne</div><div class="kicker" style="color: #6a5b57; margin-top: 6px;">[ROLE] · Packmind</div></div>
+      </div>
+      <div style="display: flex; gap: 22px; align-items: center; background: #e6ddce; padding: 26px 30px;">
+        <div style="width: 72px; height: 72px; background: #6e2b26; flex-shrink: 0;"></div>
+        <div><div style="font-size: 22px; font-weight: 700;">Yannick Grenzinger</div><div class="kicker" style="color: #6a5b57; margin-top: 6px;">[ROLE] · Payfit</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="kicker" style="display: flex; align-items: center; justify-content: space-between; padding: 26px 64px; background: #241a18; color: #a9968f;">
+    <div>© 2026 Agentic Crafters</div>
+    <div style="display: flex; gap: 26px;">
+      <a href="#" style="color: #a9968f;">YouTube</a>
+      <a href="#" style="color: #a9968f;">Spotify</a>
+      <a href="#" style="color: #a9968f;">Apple Podcasts</a>
+      <a href="#" style="color: #a9968f;">RSS</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

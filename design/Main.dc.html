@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Public+Sans:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #a9522f; text-decoration: none; }
+    a:hover { color: #7d3a1f; }
+    .lbl { font: 500 12px/1 "Public Sans", system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: #8d8177; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; background: #faf6ef; color: #37312b; font-family: 'Public Sans', system-ui, sans-serif;">
+
+  <!-- nav -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 28px 96px; border-bottom: 1px solid #e3dbcf;">
+    <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 24px; letter-spacing: -0.01em;">Agentic Crafters</div>
+    <div style="display: flex; gap: 36px; font-size: 15px; color: #6b6058;">
+      <a href="#" style="color: #6b6058;">Episodes</a>
+      <a href="#" style="color: #6b6058;">About</a>
+      <a href="#" style="color: #6b6058;">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 32px; padding: 96px 96px 88px;">
+    <div style="grid-column: span 8;">
+      <div class="lbl" style="margin-bottom: 28px;">A podcast on software and AI</div>
+      <h1 style="font-family: 'Instrument Serif', Georgia, serif; font-size: 92px; line-height: 0.98; font-weight: 400; margin: 0 0 24px; letter-spacing: -0.02em;">Where AI meets the reality of&nbsp;software development.</h1>
+      <p style="font-size: 21px; line-height: 1.55; color: #5c534b; margin: 0 0 20px; max-width: 640px; text-wrap: pretty;">AI is reshaping how we build software products. How are teams actually adapting?</p>
+      <p style="font-size: 17px; line-height: 1.65; color: #7a6f66; margin: 0 0 40px; max-width: 620px; text-wrap: pretty;">Arthur Magne and Yannick Grenzinger talk with the people living this transformation day to day — the practices, the organisational choices, the wins and the struggles.</p>
+      <div style="display: flex; gap: 14px; align-items: center;">
+        <a href="#" style="display: flex; align-items: center; gap: 10px; background: #a9522f; color: #faf6ef; padding: 15px 26px; border-radius: 2px; font-size: 16px; font-weight: 500;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 4l14 8-14 8V4z"/></svg>
+          Listen to the latest episode
+        </a>
+        <a href="#" style="padding: 15px 24px; border: 1px solid #d6ccbe; border-radius: 2px; font-size: 16px; color: #5c534b;">Subscribe</a>
+      </div>
+    </div>
+    <div style="grid-column: span 4; display: flex; flex-direction: column; justify-content: flex-end; gap: 18px; border-left: 1px solid #e3dbcf; padding-left: 40px;">
+      <div class="lbl">Hosted by</div>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #ece3d6; flex-shrink: 0;"></div>
+          <div>
+            <div style="font-size: 16px; font-weight: 600;">Arthur Magne</div>
+            <div style="font-size: 14px; color: #8d8177;">[ROLE] · Packmind</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 14px; align-items: center;">
+          <div style="width: 52px; height: 52px; border-radius: 50%; background: #ece3d6; flex-shrink: 0;"></div>
+          <div>
+            <div style="font-size: 16px; font-weight: 600;">Yannick Grenzinger</div>
+            <div style="font-size: 14px; color: #8d8177;">[ROLE] · Payfit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- what we explore -->
+  <div style="padding: 80px 96px; border-top: 1px solid #e3dbcf; background: #f4efe5;">
+    <div class="lbl" style="margin-bottom: 40px;">What we explore</div>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 72px;">
+      <div style="display: flex; gap: 22px; align-items: flex-start;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; color: #c2b6a5; line-height: 1;">01</div>
+        <div><div style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">How your teams actually use AI</div><div style="font-size: 16px; line-height: 1.6; color: #7a6f66;">Beyond the demos and the vendor decks — what people reach for on a Tuesday afternoon.</div></div>
+      </div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; color: #c2b6a5; line-height: 1;">02</div>
+        <div><div style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">What it changes in how you organise</div><div style="font-size: 16px; line-height: 1.6; color: #7a6f66;">Roles, rituals, the place of junior developers, who decides what.</div></div>
+      </div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; color: #c2b6a5; line-height: 1;">03</div>
+        <div><div style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">What happens to code quality</div><div style="font-size: 16px; line-height: 1.6; color: #7a6f66;">Review, tests, and the debt that does not show up for another two quarters.</div></div>
+      </div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; color: #c2b6a5; line-height: 1;">04</div>
+        <div><div style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">What actually reaches production</div><div style="font-size: 16px; line-height: 1.6; color: #7a6f66;">Delivered value, not generated lines. And how fast it gets there.</div></div>
+      </div>
+      <div style="display: flex; gap: 22px; align-items: flex-start;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 34px; color: #c2b6a5; line-height: 1;">05</div>
+        <div><div style="font-size: 19px; font-weight: 600; margin-bottom: 7px;">What you measure</div><div style="font-size: 16px; line-height: 1.6; color: #7a6f66;">The numbers teams trust, and everything that still resists measurement.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- format -->
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; padding: 72px 96px; border-top: 1px solid #e3dbcf;">
+    <div><div class="lbl" style="margin-bottom: 12px;">Length</div><div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 30px;">~1 hour</div></div>
+    <div><div class="lbl" style="margin-bottom: 12px;">Formats</div><div style="font-size: 16px; line-height: 1.6; color: #5c534b;">Video on YouTube, audio wherever you listen.</div></div>
+    <div><div class="lbl" style="margin-bottom: 12px;">Languages</div><div style="font-size: 16px; line-height: 1.6; color: #5c534b;">French and English — each episode in the language it was recorded in.</div></div>
+    <div><div class="lbl" style="margin-bottom: 12px;">Every episode</div><div style="font-size: 16px; line-height: 1.6; color: #5c534b;">A written summary and the full transcript.</div></div>
+  </div>
+
+  <!-- episodes -->
+  <div style="padding: 72px 96px 96px; border-top: 1px solid #e3dbcf;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 36px;">
+      <div class="lbl">Episodes</div>
+      <a href="#" style="font-size: 15px;">All episodes →</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 0;">
+      <a href="#" style="display: grid; grid-template-columns: 84px 1fr 150px; gap: 32px; align-items: center; padding: 28px 0; border-top: 1px solid #e3dbcf; color: inherit;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 44px; color: #c2b6a5; line-height: 1;">01</div>
+        <div>
+          <div style="font-size: 22px; font-weight: 600; margin-bottom: 6px;">Shipping with agents without losing the codebase</div>
+          <div style="font-size: 15px; color: #8d8177;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
+        </div>
+        <div style="text-align: right; font-size: 14px; color: #8d8177; line-height: 1.7;">58 min<br>French</div>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 84px 1fr 150px; gap: 32px; align-items: center; padding: 28px 0; border-top: 1px solid #e3dbcf; border-bottom: 1px solid #e3dbcf; color: inherit;">
+        <div style="font-family: 'Instrument Serif', Georgia, serif; font-size: 44px; color: #c2b6a5; line-height: 1;">02</div>
+        <div>
+          <div style="font-size: 22px; font-weight: 600; margin-bottom: 6px;">Where junior developers fit now</div>
+          <div style="font-size: 15px; color: #8d8177;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
+        </div>
+        <div style="text-align: right; font-size: 14px; color: #8d8177; line-height: 1.7;">62 min<br>English</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 32px 96px; border-top: 1px solid #e3dbcf; background: #f4efe5; font-size: 14px; color: #8d8177;">
+    <div>© 2026 Agentic Crafters</div>
+    <div style="display: flex; gap: 28px;">
+      <a href="#" style="color: #8d8177;">YouTube</a>
+      <a href="#" style="color: #8d8177;">Spotify</a>
+      <a href="#" style="color: #8d8177;">Apple Podcasts</a>
+      <a href="#" style="color: #8d8177;">RSS</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
