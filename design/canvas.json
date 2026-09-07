@@ -1,13 +1,13 @@
 {
   "artboards": [
-    { "file": "Main.dc.html",       "x": 0,    "y": 0,    "w": 1440, "h": 2700, "title": "Direction A — Atelier" },
-    { "file": "DirectionB.dc.html", "x": 1560, "y": 0,    "w": 1440, "h": 2700, "title": "Direction B — Terminal" },
-    { "file": "DirectionC.dc.html", "x": 3120, "y": 0,    "w": 1440, "h": 2700, "title": "Direction C — Signal" },
-    { "file": "Episode.dc.html",    "x": 0,    "y": 2880, "w": 1440, "h": 2820, "title": "Page épisode — direction A" }
+    { "file": "Main.dc.html",       "x": 0,    "y": 0,    "w": 1440, "h": 2300, "title": "Direction A — Mono éditorial" },
+    { "file": "DirectionB.dc.html", "x": 1560, "y": 0,    "w": 1440, "h": 2300, "title": "Direction B — Terminal" },
+    { "file": "DirectionC.dc.html", "x": 3120, "y": 0,    "w": 1440, "h": 2300, "title": "Direction C — Affiche" },
+    { "file": "Episode.dc.html",    "x": 0,    "y": 2480, "w": 1440, "h": 2400, "title": "Page épisode — direction A" }
   ],
   "annotations": [
-    { "id": "brief", "x": 0, "y": -300, "w": 900, "text": "Trois directions pour la landing, à comparer sur un même contenu.\nLe contenu est identique partout : seul l'habillage change.\n\nLes crochets [GUEST NAME], [ROLE], [COMPANY] marquent ce qui reste à remplir.\nLes deux épisodes listés sont des exemples : au lancement, la section affichera « first episode coming soon »." },
-    { "id": "episode-note", "x": 1560, "y": 2880, "w": 620, "text": "La page épisode, dessinée dans la direction A.\n\nElle est là pour valider la STRUCTURE, pas l'habillage : ordre vidéo → audio → résumé dans l'autre langue → article → transcript.\nJe la redessinerai dans la direction que tu retiens." }
+    { "id": "brief", "x": 0, "y": -320, "w": 940, "text": "Trois directions pour la landing, sur un contenu strictement identique.\nA : monochrome + vert, Geist. B : sombre + ambre, JetBrains Mono. C : affiche, Anton + un aplat vermillon.\n\nLes crochets marquent ce qui reste à remplir : [GUEST NAME], [ROLE], [COMPANY].\nLes blocs PLACEHOLDER en pointillés marquent les images à produire.\nLes deux épisodes listés sont des exemples : au lancement, la section affichera « first episode coming soon »." },
+    { "id": "episode-note", "x": 1560, "y": 2480, "w": 640, "text": "La page épisode, dessinée dans la direction A.\n\nElle valide la STRUCTURE, pas l'habillage : vidéo, audio, résumé dans l'autre langue, article, transcript.\nJe la redessinerai dans la direction que tu retiens.\n\nL'épisode de démonstration est en anglais avec le résumé court en français, pour montrer les deux langues sur une même page." }
   ],
   "launch": { "view": "canvas" }
 }

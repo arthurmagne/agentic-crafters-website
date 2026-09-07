@@ -9,113 +9,123 @@
 <helmet>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
   <style>
-    body { margin: 0; }
-    a { color: #9ae66e; text-decoration: none; }
-    a:hover { color: #c2f5a0; }
+    body { margin: 0; background: #0f1216; }
+    a { color: #e8a13a; text-decoration: none; }
+    a:hover { color: #f2bb7a; }
     .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
-    .tag { font: 500 11px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: 0.12em; text-transform: uppercase; color: #6f7b86; }
+    .ph { border: 1px dashed #3a424b; background: #171c21; display: flex; align-items: center; justify-content: center; color: #6b7681; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 11px; text-align: center; }
   </style>
 </helmet>
 
-<div style="width: 1440px; background: #101317; color: #dde3e9; font-family: 'IBM Plex Sans', system-ui, sans-serif;">
+<div style="width: 1440px; background: #0f1216; color: #dfe5ea; font-family: 'IBM Plex Sans', system-ui, sans-serif;">
 
-  <!-- nav -->
-  <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 80px; border-bottom: 1px solid #21272e;">
-    <div class="mono" style="font-size: 15px; font-weight: 700; letter-spacing: -0.01em;"><span style="color: #9ae66e;">$</span> agentic-crafters</div>
-    <div class="mono" style="display: flex; gap: 32px; font-size: 13px; color: #8b96a1;">
-      <a href="#" style="color: #8b96a1;">episodes</a>
-      <a href="#" style="color: #8b96a1;">about</a>
-      <a href="#" style="color: #8b96a1;">subscribe</a>
+  <div style="display: flex; align-items: center; justify-content: space-between; height: 68px; padding: 0 80px; border-bottom: 1px solid #232a31;">
+    <div class="mono" style="font-size: 15px; font-weight: 700;">Agentic Crafters</div>
+    <div style="display: flex; gap: 32px; font-size: 15px;">
+      <a href="#" style="color: #9aa5b0;">Episodes</a>
+      <a href="#about" style="color: #9aa5b0;">About</a>
+      <a href="#" style="color: #dfe5ea; font-weight: 500;">Subscribe</a>
     </div>
   </div>
 
-  <!-- hero -->
-  <div style="padding: 92px 80px 80px; border-bottom: 1px solid #21272e;">
-    <div class="tag" style="margin-bottom: 32px;">// a podcast on software and AI</div>
-    <h1 class="mono" style="font-size: 68px; line-height: 1.06; font-weight: 700; margin: 0 0 28px; letter-spacing: -0.03em; max-width: 1000px;">Where AI meets the reality of <span style="color: #9ae66e;">software development.</span></h1>
-    <p style="font-size: 20px; line-height: 1.6; color: #aab4bf; margin: 0 0 18px; max-width: 700px; text-wrap: pretty;">AI is reshaping how we build software products. How are teams actually adapting?</p>
-    <p style="font-size: 16px; line-height: 1.7; color: #7d8894; margin: 0 0 40px; max-width: 680px; text-wrap: pretty;">Arthur Magne and Yannick Grenzinger talk with the people living this transformation day to day — the practices, the organisational choices, the wins and the struggles.</p>
-    <div style="display: flex; gap: 12px; align-items: center;">
-      <a href="#" class="mono" style="display: flex; align-items: center; gap: 10px; background: #9ae66e; color: #101317; padding: 14px 24px; font-size: 14px; font-weight: 500;">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 4l14 8-14 8V4z"/></svg>
-        latest episode
-      </a>
-      <a href="#" class="mono" style="padding: 14px 22px; border: 1px solid #2c343c; font-size: 14px; color: #aab4bf;">subscribe</a>
-    </div>
-  </div>
-
-  <!-- what we explore -->
-  <div style="padding: 72px 80px; border-bottom: 1px solid #21272e;">
-    <div class="tag" style="margin-bottom: 36px;">// what we explore</div>
-    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #21272e; border: 1px solid #21272e;">
-      <div style="background: #151a1f; padding: 30px 32px;"><div class="mono" style="font-size: 12px; color: #9ae66e; margin-bottom: 12px;">01</div><div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">How your teams actually use AI</div><div style="font-size: 15px; line-height: 1.6; color: #7d8894;">Beyond the demos and the vendor decks — what people reach for on a Tuesday afternoon.</div></div>
-      <div style="background: #151a1f; padding: 30px 32px;"><div class="mono" style="font-size: 12px; color: #9ae66e; margin-bottom: 12px;">02</div><div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">What it changes in how you organise</div><div style="font-size: 15px; line-height: 1.6; color: #7d8894;">Roles, rituals, the place of junior developers, who decides what.</div></div>
-      <div style="background: #151a1f; padding: 30px 32px;"><div class="mono" style="font-size: 12px; color: #9ae66e; margin-bottom: 12px;">03</div><div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">What happens to code quality</div><div style="font-size: 15px; line-height: 1.6; color: #7d8894;">Review, tests, and the debt that does not show up for another two quarters.</div></div>
-      <div style="background: #151a1f; padding: 30px 32px;"><div class="mono" style="font-size: 12px; color: #9ae66e; margin-bottom: 12px;">04</div><div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">What actually reaches production</div><div style="font-size: 15px; line-height: 1.6; color: #7d8894;">Delivered value, not generated lines. And how fast it gets there.</div></div>
-      <div style="background: #151a1f; padding: 30px 32px; grid-column: span 2;"><div class="mono" style="font-size: 12px; color: #9ae66e; margin-bottom: 12px;">05</div><div style="font-size: 18px; font-weight: 600; margin-bottom: 8px;">What you measure</div><div style="font-size: 15px; line-height: 1.6; color: #7d8894;">The numbers teams trust, and everything that still resists measurement.</div></div>
-    </div>
-  </div>
-
-  <!-- format + hosts -->
-  <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; padding: 72px 80px; border-bottom: 1px solid #21272e;">
+  <div style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px; padding: 84px 80px 92px; align-items: center;">
     <div style="grid-column: span 7;">
-      <div class="tag" style="margin-bottom: 28px;">// format</div>
-      <div class="mono" style="display: flex; flex-direction: column; gap: 14px; font-size: 14px; color: #aab4bf;">
-        <div style="display: flex; gap: 20px;"><span style="color: #6f7b86; width: 110px; flex-shrink: 0;">length</span><span>~1 hour</span></div>
-        <div style="display: flex; gap: 20px;"><span style="color: #6f7b86; width: 110px; flex-shrink: 0;">formats</span><span>video on YouTube, audio wherever you listen</span></div>
-        <div style="display: flex; gap: 20px;"><span style="color: #6f7b86; width: 110px; flex-shrink: 0;">languages</span><span>French and English — each episode in the language it was recorded in</span></div>
-        <div style="display: flex; gap: 20px;"><span style="color: #6f7b86; width: 110px; flex-shrink: 0;">included</span><span>a written summary and the full transcript</span></div>
+      <div class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #e8a13a; margin-bottom: 26px;">A podcast on software and AI</div>
+      <h1 class="mono" style="font-size: 60px; line-height: 1.06; font-weight: 700; letter-spacing: -0.035em; margin: 0 0 26px;">Where AI meets the reality of software development.</h1>
+      <p style="font-size: 20px; line-height: 1.5; color: #97a2ad; margin: 0 0 40px; max-width: 32ch; text-wrap: pretty;">AI is reshaping how we build software products. How are teams actually adapting?</p>
+      <div style="display: flex; gap: 12px;">
+        <a href="#" style="background: #e8a13a; color: #0f1216; padding: 15px 26px; font-size: 15px; font-weight: 600;">Latest episode</a>
+        <a href="#" style="padding: 15px 24px; border: 1px solid #303840; font-size: 15px; color: #dfe5ea;">Subscribe</a>
       </div>
     </div>
     <div style="grid-column: span 5;">
-      <div class="tag" style="margin-bottom: 28px;">// hosted by</div>
-      <div style="display: flex; flex-direction: column; gap: 18px;">
-        <div style="display: flex; gap: 14px; align-items: center;">
-          <div style="width: 48px; height: 48px; background: #21272e; flex-shrink: 0;"></div>
-          <div><div style="font-size: 16px; font-weight: 600;">Arthur Magne</div><div class="mono" style="font-size: 13px; color: #6f7b86;">[ROLE] @ Packmind</div></div>
+      <div class="ph" style="aspect-ratio: 4 / 3;">PLACEHOLDER<br>Studio photo of the two hosts recording<br>1200 x 900</div>
+    </div>
+  </div>
+
+  <div style="padding: 0 80px 92px;">
+    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 26px;">
+      <h2 style="font-size: 34px; font-weight: 600; letter-spacing: -0.025em; margin: 0;">Episodes</h2>
+      <a href="#" style="font-size: 15px;">All episodes</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <a href="#" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) 130px; gap: 30px; align-items: center; padding: 20px 24px; background: #151a1f; border: 1px solid #232a31; color: inherit;">
+        <div class="ph" style="aspect-ratio: 16 / 9;">PLACEHOLDER<br>Episode still 640x360</div>
+        <div>
+          <div class="mono" style="font-size: 12px; color: #e8a13a; margin-bottom: 8px;">01</div>
+          <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 6px;">Shipping with agents without losing the codebase</div>
+          <div style="font-size: 15px; color: #8794a0;">[GUEST NAME], [ROLE] at [COMPANY]</div>
         </div>
-        <div style="display: flex; gap: 14px; align-items: center;">
-          <div style="width: 48px; height: 48px; background: #21272e; flex-shrink: 0;"></div>
-          <div><div style="font-size: 16px; font-weight: 600;">Yannick Grenzinger</div><div class="mono" style="font-size: 13px; color: #6f7b86;">[ROLE] @ Payfit</div></div>
+        <div class="mono" style="text-align: right; font-size: 12px; color: #8794a0; line-height: 1.9;">58 min<br>French</div>
+      </a>
+      <a href="#" style="display: grid; grid-template-columns: 200px minmax(0, 1fr) 130px; gap: 30px; align-items: center; padding: 20px 24px; background: #151a1f; border: 1px solid #232a31; color: inherit;">
+        <div class="ph" style="aspect-ratio: 16 / 9;">PLACEHOLDER<br>Episode still 640x360</div>
+        <div>
+          <div class="mono" style="font-size: 12px; color: #e8a13a; margin-bottom: 8px;">02</div>
+          <div style="font-size: 21px; font-weight: 600; letter-spacing: -0.015em; margin-bottom: 6px;">Where junior developers fit now</div>
+          <div style="font-size: 15px; color: #8794a0;">[GUEST NAME], [ROLE] at [COMPANY]</div>
         </div>
+        <div class="mono" style="text-align: right; font-size: 12px; color: #8794a0; line-height: 1.9;">62 min<br>English</div>
+      </a>
+    </div>
+  </div>
+
+  <div style="padding: 0 80px 92px;">
+    <h2 style="font-size: 34px; font-weight: 600; letter-spacing: -0.025em; margin: 0 0 40px; max-width: 22ch;">What we ask every guest</h2>
+    <div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 36px 44px;">
+      <div style="grid-column: span 3; border-top: 1px solid #e8a13a; padding-top: 20px;">
+        <div style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">How your teams actually use AI</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #8794a0;">Beyond the demos and the vendor decks. What people reach for on a Tuesday afternoon.</div>
+      </div>
+      <div style="grid-column: span 3; border-top: 1px solid #e8a13a; padding-top: 20px;">
+        <div style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">What it changes in how you organise</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #8794a0;">Roles, rituals, the place of junior developers, who decides what.</div>
+      </div>
+      <div style="grid-column: span 2; border-top: 1px solid #232a31; padding-top: 20px;">
+        <div style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">What happens to code quality</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #8794a0;">Review, tests, and the debt that does not show up for another two quarters.</div>
+      </div>
+      <div style="grid-column: span 2; border-top: 1px solid #232a31; padding-top: 20px;">
+        <div style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">What actually reaches production</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #8794a0;">Delivered value, not generated lines. And how fast it gets there.</div>
+      </div>
+      <div style="grid-column: span 2; border-top: 1px solid #232a31; padding-top: 20px;">
+        <div style="font-size: 21px; font-weight: 600; margin-bottom: 10px;">What you measure</div>
+        <div style="font-size: 16px; line-height: 1.6; color: #8794a0;">The numbers teams trust, and everything that still resists measurement.</div>
       </div>
     </div>
   </div>
 
-  <!-- episodes -->
-  <div style="padding: 72px 80px 88px;">
-    <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 32px;">
-      <div class="tag">// episodes</div>
-      <a href="#" class="mono" style="font-size: 13px;">all episodes →</a>
+  <div id="about" style="display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 60px; padding: 0 80px 92px;">
+    <div style="grid-column: span 7;">
+      <h2 style="font-size: 34px; font-weight: 600; letter-spacing: -0.025em; margin: 0 0 28px;">Your hosts</h2>
+      <p style="font-size: 17px; line-height: 1.65; color: #97a2ad; margin: 0 0 34px; max-width: 58ch; text-wrap: pretty;">Arthur Magne and Yannick Grenzinger talk with the people living this transformation day to day: the practices, the organisational choices, the wins and the struggles.</p>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px;">
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <div class="ph" style="width: 64px; height: 64px; flex-shrink: 0; font-size: 9px;">PHOTO</div>
+          <div><div style="font-size: 17px; font-weight: 600;">Arthur Magne</div><div style="font-size: 14px; color: #8794a0; margin-top: 3px;">[ROLE] at Packmind</div></div>
+        </div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <div class="ph" style="width: 64px; height: 64px; flex-shrink: 0; font-size: 9px;">PHOTO</div>
+          <div><div style="font-size: 17px; font-weight: 600;">Yannick Grenzinger</div><div style="font-size: 14px; color: #8794a0; margin-top: 3px;">[ROLE] at Payfit</div></div>
+        </div>
+      </div>
     </div>
-    <div style="display: flex; flex-direction: column; gap: 12px;">
-      <a href="#" style="display: grid; grid-template-columns: 60px 1fr 170px; gap: 28px; align-items: center; padding: 26px 30px; background: #151a1f; border: 1px solid #21272e; color: inherit;">
-        <div class="mono" style="font-size: 24px; color: #9ae66e;">01</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 600; margin-bottom: 6px;">Shipping with agents without losing the codebase</div>
-          <div style="font-size: 14px; color: #7d8894;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
-        </div>
-        <div class="mono" style="text-align: right; font-size: 12px; color: #6f7b86; line-height: 1.8;">58 min<br>FR</div>
-      </a>
-      <a href="#" style="display: grid; grid-template-columns: 60px 1fr 170px; gap: 28px; align-items: center; padding: 26px 30px; background: #151a1f; border: 1px solid #21272e; color: inherit;">
-        <div class="mono" style="font-size: 24px; color: #9ae66e;">02</div>
-        <div>
-          <div style="font-size: 20px; font-weight: 600; margin-bottom: 6px;">Where junior developers fit now</div>
-          <div style="font-size: 14px; color: #7d8894;">[GUEST NAME] · [ROLE] at [COMPANY]</div>
-        </div>
-        <div class="mono" style="text-align: right; font-size: 12px; color: #6f7b86; line-height: 1.8;">62 min<br>EN</div>
-      </a>
+    <div style="grid-column: span 5; background: #151a1f; border: 1px solid #232a31; padding: 34px 34px 38px;">
+      <div class="mono" style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #e8a13a; margin-bottom: 22px;">The format</div>
+      <div style="display: flex; flex-direction: column; gap: 18px; font-size: 16px; line-height: 1.55; color: #b8c2cc;">
+        <div>About an hour per episode.</div>
+        <div>Video on YouTube, audio wherever you listen.</div>
+        <div>French and English. Each episode stays in the language it was recorded in.</div>
+        <div>A written summary and the full transcript, every time.</div>
+      </div>
     </div>
   </div>
 
-  <!-- footer -->
-  <div class="mono" style="display: flex; align-items: center; justify-content: space-between; padding: 28px 80px; border-top: 1px solid #21272e; font-size: 12px; color: #6f7b86;">
-    <div>© 2026 agentic crafters</div>
-    <div style="display: flex; gap: 24px;">
-      <a href="#" style="color: #6f7b86;">youtube</a>
-      <a href="#" style="color: #6f7b86;">spotify</a>
-      <a href="#" style="color: #6f7b86;">apple</a>
-      <a href="#" style="color: #6f7b86;">rss</a>
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 26px 80px; border-top: 1px solid #232a31; font-size: 14px; color: #8794a0;">
+    <div>2026 Agentic Crafters</div>
+    <div style="display: flex; gap: 26px;">
+      <a href="#" style="color: #8794a0;">YouTube</a><a href="#" style="color: #8794a0;">Spotify</a><a href="#" style="color: #8794a0;">Apple Podcasts</a><a href="#" style="color: #8794a0;">RSS</a>
     </div>
   </div>
 

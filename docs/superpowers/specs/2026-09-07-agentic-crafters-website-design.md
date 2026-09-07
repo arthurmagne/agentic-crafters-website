@@ -105,8 +105,13 @@ structurée et resserrée de la conversation, pas une retranscription.
 
 `transcript.md` est un fichier séparé. Un transcript d'une heure fait 8 000 à
 12 000 mots ; l'inclure dans la page épisode alourdirait le chargement et
-diluerait le référencement de l'article de synthèse. Son absence est un cas
-normal : le lien vers le transcript n'apparaît alors tout simplement pas.
+diluerait le référencement de l'article de synthèse.
+
+La landing annonce un transcript pour chaque épisode, ce qui en fait un
+engagement éditorial et non une option : Zencastr produit la transcription, le
+coût marginal est faible. Le gabarit tolère néanmoins l'absence du fichier, le
+lien n'apparaissant simplement pas, pour qu'un oubli dégrade la page au lieu de
+casser le build.
 
 ## 5. Pages
 
@@ -118,6 +123,9 @@ normal : le lien vers le transcript n'apparaît alors tout simplement pas.
 | `/episodes/<slug>/transcript` | Transcript intégral, retour vers l'épisode |
 | `/rss.xml` | Flux du site |
 | `/404` | Page d'erreur sur mesure |
+
+L'entrée « About » de la navigation est une ancre vers la section « Your hosts »
+de la landing, et non une route distincte.
 
 La section « what we explore » de la landing reprend les questions directrices
 des notes de cadrage : comment les équipes utilisent l'IA, l'impact sur
