@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import Header from '../../components/Header.astro';
+import Landing from '../../components/Landing.astro';
+import Footer from '../../components/Footer.astro';
+import { ui } from '../../i18n/ui';
+
+const lang = 'en' as const;
+---
+
+<Base lang={lang}>
+  <a class="skip" href="#contenu">{ui[lang].skip}</a>
+  <Header lang={lang} />
+  <Landing lang={lang} />
+  <Footer lang={lang} />
+</Base>

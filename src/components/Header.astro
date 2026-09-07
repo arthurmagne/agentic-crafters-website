@@ -1,0 +1,62 @@
+---
+import { ui, paths, otherLocale, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const other = otherLocale[lang];
+const home = paths[lang];
+---
+
+<header class="header wrap">
+  <a class="wordmark" href={home} aria-label={t.homeLabel}>ac<span aria-hidden="true">↗</span></a>
+
+  <nav aria-label={t.navLabel}>
+    <a href="#approche">{t.navPodcast}</a>
+    <a href="#sujets">{t.navTopics}</a>
+    <a href="#hotes">{t.navHosts}</a>
+  </nav>
+
+  <div class="header-end">
+    <span class="status"><i aria-hidden="true"></i>{t.status}</span>
+
+    <p class="lang" aria-label={t.langLabel}>
+      <a href={paths[lang]} aria-current="true" lang={t.htmlLang}>{lang.toUpperCase()}</a>
+      <em aria-hidden="true">/</em>
+      <a href={paths[other]} lang={ui[other].htmlLang} hreflang={ui[other].htmlLang}
+        >{other.toUpperCase()}</a
+      >
+    </p>
+
+    <button class="theme-toggle" type="button" aria-label={t.themeToggle} title={t.themeToggle}>
+      <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4.2" />
+        <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6" />
+      </svg>
+      <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1z" />
+      </svg>
+    </button>
+  </div>
+</header>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('.theme-toggle');
+  button?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const explicit = root.dataset.theme;
+    const isDark = explicit
+      ? explicit === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const next = isDark ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch {
+      /* nothing to persist to: the choice still applies for this page view */
+    }
+  });
+</script>

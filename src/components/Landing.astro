@@ -1,0 +1,109 @@
+---
+import { ui, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const signalBars = Array.from({ length: 17 });
+---
+
+<main id="contenu">
+  <section class="hero wrap" aria-labelledby="titre">
+    <p class="eyebrow">{t.heroEyebrow}</p>
+    <h1 id="titre">Agentic<span class="second">Crafters<span class="period">.</span></span></h1>
+
+    <div class="hero-bottom">
+      <h2>
+        {t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span class="mark">{t.taglineMark}</span>
+      </h2>
+      <div class="hero-copy">
+        <p>{t.heroQuestion}</p>
+        <a class="button" href="#approche">{t.heroCta} <span aria-hidden="true">↘</span></a>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <span>{t.heroMetaHosts}</span>
+      <span>{t.heroMetaClaim}</span>
+    </div>
+  </section>
+
+  <section class="approach" id="approche" aria-labelledby="approche-titre">
+    <div class="wrap approach-grid">
+      <div>
+        <p class="eyebrow light">{t.approachEyebrow}</p>
+        <div class="signal" aria-hidden="true">
+          {signalBars.map(() => <span></span>)}
+        </div>
+        <p class="signal-caption">{t.signalCaption}</p>
+      </div>
+      <div>
+        <h2 id="approche-titre">
+          {t.approachTitleLine1}<br />{t.approachTitleLine2}<em>{t.approachTitleEm}</em>
+        </h2>
+        <p>{t.approachP1}</p>
+        <p>{t.approachP2}</p>
+        <div class="takeaway">{t.approachTakeaway}</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="topics wrap" id="sujets" aria-labelledby="sujets-titre">
+    <div class="section-heading">
+      <p class="eyebrow">{t.topicsEyebrow}</p>
+      <h2 id="sujets-titre">{t.topicsTitleLines[0]}<br />{t.topicsTitleLines[1]}</h2>
+    </div>
+    <div class="topic-list">
+      {
+        t.topics.map((topic, index) => (
+          <article>
+            <span class="number">{String(index + 1).padStart(2, '0')}</span>
+            <h3>{topic.titleLines[0]}<br />{topic.titleLines[1]}</h3>
+            <p>{topic.body}</p>
+            <span class="topic-mark" aria-hidden="true">↗</span>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="hosts wrap" id="hotes" aria-labelledby="hotes-titre">
+    <div class="section-heading">
+      <p class="eyebrow">{t.hostsEyebrow}</p>
+      <h2 id="hotes-titre">{t.hostsTitleLines[0]}<br />{t.hostsTitleLines[1]}</h2>
+    </div>
+    <div class="host-grid">
+      <article class="host">
+        <span class="initials" aria-hidden="true">AM<span>↗</span></span>
+        <div>
+          <h3>Arthur Magne</h3>
+          <p>{t.arthurRole}</p>
+        </div>
+      </article>
+      <article class="host">
+        <span class="initials" aria-hidden="true">YG<span>↗</span></span>
+        <div>
+          <h3>Yannick Grenzinger</h3>
+          <p>{t.yannickRole}</p>
+          <a href="https://www.linkedin.com/in/yannickgrenzinger/"
+            >{t.yannickLinkedIn} <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </article>
+    </div>
+    <p class="audience">{t.audience}</p>
+  </section>
+
+  <section class="launch" aria-labelledby="launch-titre">
+    <div class="wrap launch-inner">
+      <div>
+        <p class="eyebrow">{t.launchEyebrow}</p>
+        <h2 id="launch-titre">{t.launchTitleLines[0]}<br />{t.launchTitleLines[1]}</h2>
+      </div>
+      <p>{t.launchBodyLines[0]}<br />{t.launchBodyLines[1]}</p>
+    </div>
+  </section>
+</main>

@@ -21,8 +21,10 @@ Le site remplace l'option « Notion Site » envisagée dans les notes de cadrage
 | Domaine | `agenticcrafters.dev` — `agenticcrafters.com` est capté pour revente (Afternic) |
 | Vidéo | YouTube, lecteur embarqué |
 | Audio | Spotify for Creators, lecteur embarqué |
-| Habillage | Anglais |
+| Habillage | Bilingue français et anglais, français par défaut |
 | Contenu des épisodes | Langue d'enregistrement, français ou anglais |
+| Thème | Clair et sombre, préférence système plus bascule manuelle |
+| Identité visuelle | Space Grotesk et DM Sans, accent vert acide `#cefb55` |
 | Durée annoncée | ~1 h |
 | Fréquence | Non annoncée tant qu'elle n'est pas tenue |
 | Invités pressentis | Non publiés |
@@ -30,8 +32,10 @@ Le site remplace l'option « Notion Site » envisagée dans les notes de cadrage
 
 ## 3. Stratégie linguistique
 
-L'habillage du site — navigation, landing, libellés, pied de page — est en
-anglais. C'est un coût unique d'environ 500 mots.
+L'habillage du site, c'est-à-dire la navigation, la landing, les libellés et le
+pied de page, existe en français et en anglais. Le français est servi à la
+racine, l'anglais sous `/en/`, et un sélecteur dans l'en-tête passe de l'un à
+l'autre. C'est un coût unique d'environ 500 mots par langue.
 
 Le contenu de chaque épisode reste dans sa langue d'enregistrement, article de
 synthèse et transcript compris. Traduire ces contenus représenterait environ
@@ -44,8 +48,10 @@ langue, pour qu'un visiteur puisse juger de la pertinence d'un épisode qu'il ne
 peut pas lire. Environ 100 mots au lieu de 10 000. Les sous-titres traduits
 automatiquement de YouTube couvrent le besoin sur la vidéo.
 
-Il n'y a **pas** de routes dupliquées `/fr` et `/en`, pas de `hreflang`, pas de
-sélecteur de langue. L'attribut `lang` est positionné correctement page par page.
+Les deux versions de la landing existant réellement, elles déclarent des
+`hreflang` réciproques plus un `x-default` vers le français. L'attribut `lang`
+est positionné page par page, et le bloc de résumé dans l'autre langue porte son
+propre `lang` pour que les lecteurs d'écran changent de voix.
 
 ### Pitch anglais (à valider par Arthur)
 
