@@ -12,38 +12,30 @@ const signalBars = Array.from({ length: 17 });
 
 <main id="contenu">
   <section class="hero wrap" aria-labelledby="titre">
-    <p class="eyebrow">{t.heroEyebrow}</p>
+    <div class="eyebrow">{t.heroEyebrow}</div>
     <h1 id="titre">Agentic<span class="second">Crafters<span class="period">.</span></span></h1>
-
     <div class="hero-bottom">
-      <h2>
-        {t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span class="mark">{t.taglineMark}</span>
-      </h2>
+      <h2>{t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span>{t.taglineMark}</span></h2>
       <div class="hero-copy">
-        <p>{t.heroQuestion}</p>
-        <a class="button" href="#approche">{t.heroCta} <span aria-hidden="true">↘</span></a>
+        <p>{t.heroQuestion}</p><a class="button" href="#approche"
+          >{t.heroCta} <span aria-hidden="true">↘</span></a
+        >
       </div>
     </div>
-
-    <div class="hero-meta">
-      <span>{t.heroMetaHosts}</span>
-      <span>{t.heroMetaClaim}</span>
-    </div>
+    <div class="hero-meta"><span>{t.heroMetaHosts}</span><span>{t.heroMetaClaim}</span></div>
   </section>
 
   <section class="approach" id="approche" aria-labelledby="approche-titre">
     <div class="wrap approach-grid">
       <div>
         <p class="eyebrow light">{t.approachEyebrow}</p>
-        <div class="signal" aria-hidden="true">
-          {signalBars.map(() => <span></span>)}
-        </div>
+        <div class="signal" aria-hidden="true">{signalBars.map(() => <span />)}</div>
         <p class="signal-caption">{t.signalCaption}</p>
       </div>
       <div>
-        <h2 id="approche-titre">
-          {t.approachTitleLine1}<br />{t.approachTitleLine2}<em>{t.approachTitleEm}</em>
-        </h2>
+        <h2 id="approche-titre"
+          >{t.approachTitleLine1}<br />{t.approachTitleLine2}<em>{t.approachTitleEm}</em></h2
+        >
         <p>{t.approachP1}</p>
         <p>{t.approachP2}</p>
         <div class="takeaway">{t.approachTakeaway}</div>
@@ -61,9 +53,15 @@ const signalBars = Array.from({ length: 17 });
         t.topics.map((topic, index) => (
           <article>
             <span class="number">{String(index + 1).padStart(2, '0')}</span>
-            <h3>{topic.titleLines[0]}<br />{topic.titleLines[1]}</h3>
+            <h3>
+              {topic.titleLines[0]}
+              <br />
+              {topic.titleLines[1]}
+            </h3>
             <p>{topic.body}</p>
-            <span class="topic-mark" aria-hidden="true">↗</span>
+            <span class="topic-mark" aria-hidden="true">
+              ↗
+            </span>
           </article>
         ))
       }
@@ -78,17 +76,13 @@ const signalBars = Array.from({ length: 17 });
     <div class="host-grid">
       <article class="host">
         <span class="initials" aria-hidden="true">AM<span>↗</span></span>
-        <div>
-          <h3>Arthur Magne</h3>
-          <p>{t.arthurRole}</p>
-        </div>
+        <div><h3>Arthur Magne</h3><p>{t.arthurRole}</p></div>
       </article>
       <article class="host">
         <span class="initials" aria-hidden="true">YG<span>↗</span></span>
         <div>
-          <h3>Yannick Grenzinger</h3>
-          <p>{t.yannickRole}</p>
-          <a href="https://www.linkedin.com/in/yannickgrenzinger/"
+          <h3>Yannick Grenzinger</h3><p>{t.yannickRole}</p><a
+            href="https://www.linkedin.com/in/yannickgrenzinger/"
             >{t.yannickLinkedIn} <span aria-hidden="true">↗</span></a
           >
         </div>

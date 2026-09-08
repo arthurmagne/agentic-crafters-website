@@ -20,8 +20,7 @@ const otherHref = new URL(paths[other], Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{t.metaTitle}</title>
     <meta name="description" content={t.metaDescription} />
-    <meta name="theme-color" content="#fafbf9" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#141613" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#151715" />
 
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={t.htmlLang} href={canonical} />
@@ -33,27 +32,8 @@ const otherHref = new URL(paths[other], Astro.site).href;
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={t.ogLocale} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    />
-
-    <!-- Applied before first paint so an explicit choice never flashes the other theme. -->
-    <script is:inline>
-      try {
-        const stored = localStorage.getItem('theme');
-        if (stored === 'light' || stored === 'dark') {
-          document.documentElement.dataset.theme = stored;
-        }
-      } catch {
-        /* private mode or blocked storage: fall back to the system preference */
-      }
-    </script>
   </head>
   <body>
     <slot />
