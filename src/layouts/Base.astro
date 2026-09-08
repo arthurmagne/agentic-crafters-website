@@ -25,7 +25,7 @@ const otherHref = new URL(localePath(other), Astro.site).href;
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={t.htmlLang} href={canonical} />
     <link rel="alternate" hreflang={ui[other].htmlLang} href={otherHref} />
-    <link rel="alternate" hreflang="x-default" href={new URL(localePath('fr'), Astro.site).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath('en'), Astro.site).href} />
 
     <meta property="og:title" content="Agentic Crafters" />
     <meta property="og:description" content={t.ogDescription} />

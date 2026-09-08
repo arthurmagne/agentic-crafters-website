@@ -21,7 +21,7 @@ Le site remplace l'option « Notion Site » envisagée dans les notes de cadrage
 | Domaine | `agenticcrafters.dev` — `agenticcrafters.com` est capté pour revente (Afternic) |
 | Vidéo | YouTube, lecteur embarqué |
 | Audio | Spotify for Creators, lecteur embarqué |
-| Habillage | Bilingue français et anglais, français par défaut |
+| Habillage | Bilingue anglais et français, anglais par défaut |
 | Contenu des épisodes | Langue d'enregistrement, français ou anglais |
 | Thème | Clair et sombre, préférence système plus bascule manuelle |
 | Identité visuelle | Space Grotesk et DM Sans, accent vert acide `#cefb55` |
@@ -33,8 +33,8 @@ Le site remplace l'option « Notion Site » envisagée dans les notes de cadrage
 ## 3. Stratégie linguistique
 
 L'habillage du site, c'est-à-dire la navigation, la landing, les libellés et le
-pied de page, existe en français et en anglais. Le français est servi à la
-racine, l'anglais sous `/en/`, et un sélecteur dans l'en-tête passe de l'un à
+pied de page, existe en anglais et en français. L'anglais est servi à la
+racine, le français sous `/fr/`, et un sélecteur dans l'en-tête passe de l'un à
 l'autre. C'est un coût unique d'environ 500 mots par langue.
 
 Le contenu de chaque épisode reste dans sa langue d'enregistrement, article de
@@ -49,7 +49,7 @@ peut pas lire. Environ 100 mots au lieu de 10 000. Les sous-titres traduits
 automatiquement de YouTube couvrent le besoin sur la vidéo.
 
 Les deux versions de la landing existant réellement, elles déclarent des
-`hreflang` réciproques plus un `x-default` vers le français. L'attribut `lang`
+`hreflang` réciproques plus un `x-default` vers l'anglais. L'attribut `lang`
 est positionné page par page, et le bloc de résumé dans l'autre langue porte son
 propre `lang` pour que les lecteurs d'écran changent de voix.
 

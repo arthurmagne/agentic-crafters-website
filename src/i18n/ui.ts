@@ -1,4 +1,4 @@
-export const locales = ['fr', 'en'] as const;
+export const locales = ['en', 'fr'] as const;
 export type Locale = (typeof locales)[number];
 
 export const ui = {
@@ -166,7 +166,7 @@ export function baseUrl(): string {
 /** Chemin de la landing pour une langue, préfixé par la base de déploiement. */
 export function localePath(locale: Locale): string {
   const base = baseUrl();
-  return locale === 'fr' ? base : `${base}en/`;
+  return locale === 'en' ? base : `${base}fr/`;
 }
 
 /** Chemin d'un fichier de `public/`, préfixé par la base de déploiement. */
