@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import { ui, paths, otherLocale, type Locale } from '../i18n/ui';
+import { ui, localePath, asset, otherLocale, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
@@ -9,8 +9,8 @@ interface Props {
 const { lang } = Astro.props;
 const t = ui[lang];
 const other = otherLocale[lang];
-const canonical = new URL(paths[lang], Astro.site).href;
-const otherHref = new URL(paths[other], Astro.site).href;
+const canonical = new URL(localePath(lang), Astro.site).href;
+const otherHref = new URL(localePath(other), Astro.site).href;
 ---
 
 <!doctype html>
@@ -25,7 +25,7 @@ const otherHref = new URL(paths[other], Astro.site).href;
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={t.htmlLang} href={canonical} />
     <link rel="alternate" hreflang={ui[other].htmlLang} href={otherHref} />
-    <link rel="alternate" hreflang="x-default" href={new URL(paths.fr, Astro.site).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(localePath('fr'), Astro.site).href} />
 
     <meta property="og:title" content="Agentic Crafters" />
     <meta property="og:description" content={t.ogDescription} />
@@ -33,7 +33,7 @@ const otherHref = new URL(paths[other], Astro.site).href;
     <meta property="og:locale" content={t.ogLocale} />
     <meta property="og:url" content={canonical} />
 
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={asset('favicon.svg')} type="image/svg+xml" />
   </head>
   <body>
     <slot />

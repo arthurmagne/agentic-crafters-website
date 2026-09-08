@@ -1,5 +1,5 @@
 ---
-import { ui, paths, type Locale } from '../i18n/ui';
+import { ui, localePath, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
@@ -10,7 +10,7 @@ const t = ui[lang];
 ---
 
 <footer class="wrap footer">
-  <a class="footer-brand" href={paths[lang]}>Agentic Crafters.</a>
+  <a class="footer-brand" href={localePath(lang)}>Agentic Crafters.</a>
   <span>{t.footerTagline}</span>
   <a href="#contenu">{t.footerTop} ↑</a>
 </footer>

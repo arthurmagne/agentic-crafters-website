@@ -20,6 +20,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: withastro/action@v3
+        env:
+          # À supprimer le jour où agenticcrafters.dev est branché : le site
+          # repassera alors à la racine du domaine.
+          SITE_URL: https://arthurmagne.github.io
+          SITE_BASE: /agentic-crafters-website
 
   deploy:
     needs: build

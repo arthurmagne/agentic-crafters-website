@@ -155,5 +155,21 @@ export const ui = {
   },
 } as const;
 
-export const paths: Record<Locale, string> = { fr: '/', en: '/en/' };
 export const otherLocale: Record<Locale, Locale> = { fr: 'en', en: 'fr' };
+
+/** Base publique, toujours terminée par une barre oblique. */
+export function baseUrl(): string {
+  const raw = import.meta.env.BASE_URL || '/';
+  return raw.endsWith('/') ? raw : `${raw}/`;
+}
+
+/** Chemin de la landing pour une langue, préfixé par la base de déploiement. */
+export function localePath(locale: Locale): string {
+  const base = baseUrl();
+  return locale === 'fr' ? base : `${base}en/`;
+}
+
+/** Chemin d'un fichier de `public/`, préfixé par la base de déploiement. */
+export function asset(file: string): string {
+  return `${baseUrl()}${file.replace(/^\//, '')}`;
+}

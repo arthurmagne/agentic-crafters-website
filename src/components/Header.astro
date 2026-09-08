@@ -1,5 +1,5 @@
 ---
-import { ui, paths, otherLocale, type Locale } from '../i18n/ui';
+import { ui, localePath, otherLocale, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
@@ -11,7 +11,7 @@ const other = otherLocale[lang];
 ---
 
 <header class="header wrap">
-  <a class="wordmark" href={paths[lang]} aria-label={t.homeLabel}>ac<span aria-hidden="true">↗</span></a>
+  <a class="wordmark" href={localePath(lang)} aria-label={t.homeLabel}>ac<span aria-hidden="true">↗</span></a>
   <nav aria-label={t.navLabel}
     ><a href="#approche">{t.navPodcast}</a><a href="#sujets">{t.navTopics}</a><a href="#hotes"
       >{t.navHosts}</a
@@ -20,9 +20,9 @@ const other = otherLocale[lang];
   <div class="header-end">
     <span class="status"><i aria-hidden="true"></i>{t.status}</span>
     <p class="lang" aria-label={t.langLabel}>
-      <a href={paths[lang]} aria-current="true" lang={t.htmlLang}>{lang.toUpperCase()}</a>
+      <a href={localePath(lang)} aria-current="true" lang={t.htmlLang}>{lang.toUpperCase()}</a>
       <em aria-hidden="true">/</em>
-      <a href={paths[other]} lang={ui[other].htmlLang} hreflang={ui[other].htmlLang}
+      <a href={localePath(other)} lang={ui[other].htmlLang} hreflang={ui[other].htmlLang}
         >{other.toUpperCase()}</a
       >
     </p>
