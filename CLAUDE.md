@@ -84,13 +84,15 @@ lecteur YouTube, lecteur audio Spotify, article de synthèse et transcript
 complet sur une page séparée. Voir la section 4 de la spec pour le modèle de
 contenu prévu.
 
-Aucun épisode n'est enregistré à ce jour, la landing affiche donc un état
+Seul l'épisode zéro est enregistré : Arthur et Yannick y présentent le
+podcast, sans invité. Les textes de la landing en reprennent les messages
+principaux. Aucun épisode n'est publié, la landing affiche donc toujours un état
 « podcast en préparation ».
 
 ## Points en suspens
 
-- Intitulé de poste exact d'Arthur, et son lien LinkedIn. Le site affiche
-  aujourd'hui « Co-host · Agentic Crafters », sans mention de Packmind.
+- Lien LinkedIn d'Arthur. Son poste, « CPO & cofondateur · Packmind », vient
+  de l'épisode zéro.
 - Portraits des deux hôtes, et visuels d'épisode. Le site n'a aucune image.
 - Ancres de sections encore en français (`#approche`, `#sujets`, `#hotes`,
   `#contenu`) sur un site désormais anglophone.

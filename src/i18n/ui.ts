@@ -25,53 +25,57 @@ export const ui = {
     taglineLines: ['Quand l’IA rencontre', 'la réalité du'],
     taglineMark: 'développement logiciel.',
     heroQuestion:
-      'L’IA transforme nos façons de construire des produits logiciels. Comment les équipes s’adaptent-elles concrètement ?',
+      'L’IA ne règle pas tout par magie. Comment les équipes s’adaptent-elles vraiment, et à quel prix ?',
     heroCta: 'Découvrir le podcast',
     heroMetaHosts: 'AVEC ARTHUR MAGNE & YANNICK GRENZINGER',
-    heroMetaClaim: 'DES EXPÉRIENCES. DES PRATIQUES. DES QUESTIONS.',
+    heroMetaClaim: 'RETOURS DE TERRAIN. ASTUCES. POST-MORTEMS.',
 
     approachEyebrow: '01 / LE PODCAST',
-    signalCaption: 'À l’écoute du terrain.',
-    approachTitleLine1: 'Apprendre de celles',
-    approachTitleLine2: 'et ceux qui ',
-    approachTitleEm: 'font.',
+    signalCaption: 'Un instantané du terrain, épisode après épisode.',
+    approachTitleLine1: 'Une veille collective,',
+    approachTitleLine2: 'sans ',
+    approachTitleEm: 'bullshit.',
     approachP1:
-      'Arthur Magne et Yannick Grenzinger reçoivent celles et ceux qui expérimentent cette transformation au quotidien. Ensemble, ils explorent les pratiques, les choix d’organisation, les réussites et les difficultés rencontrées.',
+      'Tout va trop vite pour faire sa veille seul. À chaque épisode, un invité, en entreprise, en association ou indépendant, raconte ce qui marche, ce qui coince et ce qu’il en a appris. Des astuces et des post-mortems, loin des discours marketing.',
     approachP2:
-      'L’expérience de l’invité au centre, enrichie par nos observations et nos points de vue. Pour comprendre les choix, creuser les exemples et laisser une place aux questions encore ouvertes.',
+      'Agentic, parce que travailler avec des agents IA est le sujet du moment. Crafters, parce que les valeurs du software craftsmanship, l’exigence et le partage des connaissances, comptent plus que jamais : faire un logiciel dont les utilisateurs sont fiers.',
     approachTakeaway:
-      'Une veille collective entre pairs pour découvrir des pratiques à essayer et éclairer les choix de son équipe.',
+      'Ce qui est vrai aujourd’hui sera sans doute faux dans six mois. Alors on aimerait réinviter nos invités pour voir ce qui a changé.',
 
     topicsEyebrow: '02 / LES SUJETS',
     topicsTitleLines: ['Ce qui change.', 'Ce qu’on en fait.'],
     topics: [
       {
         titleLines: ['Les pratiques', 'de développement'],
-        body: 'Comment utiliser les agents, choisir les modèles et faire évoluer les pull requests, la revue de code et la qualité ?',
+        body: 'Agents, workflows, outils : que devient la revue de code face à 10 000 lignes par jour, et comment construire la confiance ?',
       },
       {
-        titleLines: ['L’organisation', 'des équipes'],
-        body: 'Autonomie ou équipe transverse ? Comment partager les apprentissages, accompagner les juniors et faire évoluer les responsabilités ?',
+        titleLines: ['L’humain', 'et l’organisation'],
+        body: 'Charge cognitive, bruit permanent, tensions : livre-t-on vraiment plus de qualité, sans épuiser les équipes ?',
       },
       {
-        titleLines: ['Du produit', 'à la production'],
-        body: 'Comment l’IA change-t-elle la collaboration entre produit et tech, la chaîne de production du logiciel et la valeur livrée ?',
+        titleLines: ['L’avenir', 'du métier'],
+        body: 'Juniors, nouveaux rôles, open source, produits codés en un week-end : quel sens garde le métier de développeur, en 2026 comme en 2040 ?',
       },
     ],
 
     hostsEyebrow: '03 / LES HÔTES',
     hostsTitleLines: ['Deux regards.', 'Une même curiosité.'],
-    arthurRole: 'Co-hôte · Agentic Crafters',
-    yannickRole: 'Co-hôte · PayFit',
+    arthurRole: 'CPO & cofondateur · Packmind',
+    arthurBio:
+      'Dix ans à outiller le partage de connaissances dans les équipes de développement, désormais aussi avec leurs agents IA : le context engineering.',
+    yannickRole: 'Engineering manager · PayFit',
+    yannickBio:
+      '21 ans de logiciel : développeur, tech lead, coach agile, CTO. Passionné de tests et de craft, convaincu que le vrai sujet, c’est l’organisation.',
     yannickLinkedIn: 'Retrouver Yannick sur LinkedIn',
     audience:
-      'Pour les développeurs, tech leads, staff engineers, architectes et engineering managers qui veulent apprendre de leurs pairs et faire évoluer les pratiques de leur équipe.',
+      'Pour les développeurs, tech leads, architectes et engineering managers qui veulent apprendre de leurs pairs, et pour les juniors et étudiants qui s’interrogent sur l’avenir du métier.',
 
     launchEyebrow: 'LA SUITE S’ÉCRIT AU MICRO',
     launchTitleLines: ['On se retrouve', 'bientôt à l’écoute.'],
     launchBodyLines: [
-      'Le podcast est en préparation.',
-      'Les premiers épisodes et les liens d’écoute seront disponibles ici.',
+      'Un épisode zéro pour poser le cadre, puis des invités francophones et anglophones.',
+      'Les épisodes et les liens d’écoute arriveront ici.',
     ],
 
     footerTagline: 'Quand l’IA rencontre la réalité du développement logiciel.',
@@ -101,53 +105,57 @@ export const ui = {
     taglineLines: ['Where AI meets', 'the reality of'],
     taglineMark: 'software development.',
     heroQuestion:
-      'AI is reshaping how we build software products. How are teams actually adapting?',
+      'AI is no magic fix. How are teams really adapting, and at what cost?',
     heroCta: 'Discover the podcast',
     heroMetaHosts: 'WITH ARTHUR MAGNE & YANNICK GRENZINGER',
-    heroMetaClaim: 'REAL EXPERIENCE. REAL PRACTICES. OPEN QUESTIONS.',
+    heroMetaClaim: 'FIELD REPORTS. TIPS. POST-MORTEMS.',
 
     approachEyebrow: '01 / THE PODCAST',
-    signalCaption: 'Listening to the field.',
-    approachTitleLine1: 'Learning from the',
-    approachTitleLine2: 'people who ',
-    approachTitleEm: 'build.',
+    signalCaption: 'A snapshot of the field, one episode at a time.',
+    approachTitleLine1: 'Keeping up together,',
+    approachTitleLine2: 'minus the ',
+    approachTitleEm: 'hype.',
     approachP1:
-      'Arthur Magne and Yannick Grenzinger talk with the people living this transformation day to day. Together they explore the practices, the organisational choices, the wins and the struggles.',
+      'Things move too fast to keep up alone. In each episode, a guest, from a company, a non-profit or working independently, shares what works, what doesn’t, and what they learned. Tips and post-mortems, not marketing talk.',
     approachP2:
-      'The guest’s own experience comes first, enriched by our observations and points of view. To understand the choices, dig into the examples, and leave room for the questions still open.',
+      'Agentic, because working with AI agents is the question of the moment. Crafters, because the values of software craftsmanship, high standards and shared knowledge, matter more than ever: building software its users are proud of.',
     approachTakeaway:
-      'A shared watch between peers, to find practices worth trying and to inform your team’s decisions.',
+      'What holds true today will probably be wrong in six months. So we’d like to invite our guests back and see what changed.',
 
     topicsEyebrow: '02 / THE TOPICS',
     topicsTitleLines: ['What is changing.', 'What we do with it.'],
     topics: [
       {
         titleLines: ['Development', 'practices'],
-        body: 'How do you use agents, choose models, and rework pull requests, code review and quality?',
+        body: 'Agents, workflows, tools: what becomes of code review facing 10,000 lines a day, and how do you build trust?',
       },
       {
-        titleLines: ['How teams', 'organise'],
-        body: 'Autonomous teams or one central team? How do you share what you learn, support juniors, and shift responsibilities?',
+        titleLines: ['People and', 'organisation'],
+        body: 'Cognitive load, constant noise, tension: are we really shipping more quality, without burning teams out?',
       },
       {
-        titleLines: ['From product', 'to production'],
-        body: 'How does AI change collaboration between product and engineering, the delivery pipeline, and the value actually shipped?',
+        titleLines: ['The future', 'of the craft'],
+        body: 'Juniors, new roles, open source, products built in a weekend: what does being a developer mean, in 2026 and in 2040?',
       },
     ],
 
     hostsEyebrow: '03 / THE HOSTS',
     hostsTitleLines: ['Two perspectives.', 'One shared curiosity.'],
-    arthurRole: 'Co-host · Agentic Crafters',
-    yannickRole: 'Co-host · PayFit',
+    arthurRole: 'CPO & co-founder · Packmind',
+    arthurBio:
+      'Ten years building tools for knowledge sharing in dev teams, now with their AI agents too: context engineering.',
+    yannickRole: 'Engineering manager · PayFit',
+    yannickBio:
+      '21 years in software: developer, tech lead, agile coach, CTO. Into testing and craft, and convinced the real issue is the organisation.',
     yannickLinkedIn: 'Find Yannick on LinkedIn',
     audience:
-      'For developers, tech leads, staff engineers, architects and engineering managers who want to learn from their peers and move their team’s practices forward.',
+      'For developers, tech leads, architects and engineering managers who want to learn from their peers, and for juniors and students wondering where the job is heading.',
 
     launchEyebrow: 'THE REST IS ON ITS WAY',
     launchTitleLines: ['Coming soon', 'to your ears.'],
     launchBodyLines: [
-      'The podcast is in preparation.',
-      'The first episodes and the listening links will appear here.',
+      'An episode zero to set the scene, then guests in French and in English.',
+      'Episodes and listening links will land here.',
     ],
 
     footerTagline: 'Where AI meets the reality of software development.',
