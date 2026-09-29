@@ -25,6 +25,19 @@ const signalBars = Array.from({ length: 17 });
     <div class="hero-meta"><span>{t.heroMetaHosts}</span><span>{t.heroMetaClaim}</span></div>
   </section>
 
+  <section class="intro-video wrap" aria-label={t.videoLabel}>
+    <div class="video-frame">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/-1VyWctfkXU"
+        title={t.videoTitle}
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <p class="video-caption">{t.videoCaption}</p>
+  </section>
+
   <section class="approach" id="approche" aria-labelledby="approche-titre">
     <div class="wrap approach-grid">
       <div>

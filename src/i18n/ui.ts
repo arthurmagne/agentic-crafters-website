@@ -30,6 +30,12 @@ export const ui = {
     heroMetaHosts: 'AVEC ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'RETOURS DE TERRAIN. ASTUCES. POST-MORTEMS.',
 
+    videoLabel: 'Vidéo de présentation',
+    videoTitle:
+      'Agentic Crafters, épisode zéro : Arthur Magne et Yannick Grenzinger présentent le podcast',
+    videoCaption:
+      'Épisode zéro. Arthur Magne et Yannick Grenzinger présentent le podcast, son format et ce qu’ils veulent explorer.',
+
     approachEyebrow: '01 / LE PODCAST',
     signalCaption: 'Un instantané du terrain, épisode après épisode.',
     approachTitleLine1: 'Une veille collective,',
@@ -109,6 +115,12 @@ export const ui = {
     heroCta: 'Discover the podcast',
     heroMetaHosts: 'WITH ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'FIELD REPORTS. TIPS. POST-MORTEMS.',
+
+    videoLabel: 'Introduction video',
+    videoTitle:
+      'Agentic Crafters, episode zero: Arthur Magne and Yannick Grenzinger introduce the podcast',
+    videoCaption:
+      'Episode zero. Arthur Magne and Yannick Grenzinger introduce the podcast, its format and what they want to explore.',
 
     approachEyebrow: '01 / THE PODCAST',
     signalCaption: 'A snapshot of the field, one episode at a time.',
