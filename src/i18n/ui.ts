@@ -21,8 +21,8 @@ export const ui = {
     otherLangName: 'English',
 
     heroEyebrow: 'LE PODCAST · IA & DÉVELOPPEMENT LOGICIEL',
-    taglineLines: ['L’IA transforme', 'le travail'],
-    taglineMark: 'logiciel.',
+    taglineLines: ['L’IA transforme', 'comment nous créons'],
+    taglineMark: 'du logiciel.',
     heroQuestion:
       'Des conversations sincères avec celles et ceux qui vivent ces changements. Découvrez ce qui fonctionne, ce qui échoue et ce que cela change pour les équipes, les pratiques et l’avenir du métier de développeur.',
     heroCta: 'Regarder l’épisode zéro',
@@ -105,8 +105,8 @@ export const ui = {
     otherLangName: 'Français',
 
     heroEyebrow: 'THE PODCAST · AI & SOFTWARE DEVELOPMENT',
-    taglineLines: ['AI is reshaping', 'software'],
-    taglineMark: 'work.',
+    taglineLines: ['AI is reshaping', 'how we create'],
+    taglineMark: 'software.',
     heroQuestion:
       'Honest conversations with the people living it. Hear what’s working, what isn’t, and what it means for teams, craft, and the future of being a developer.',
     heroCta: 'Watch episode zero',
