@@ -1,0 +1,54 @@
+---
+import { episodes, formatDuration } from '../data/episodes';
+import { ui, episodePath, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const dateFormat = new Intl.DateTimeFormat(t.htmlLang, {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+---
+
+<main id="contenu" class="episodes-main wrap" aria-labelledby="episodes-title">
+  <header class="episodes-heading">
+    <p class="eyebrow">{t.episodesEyebrow}</p>
+    <h1 id="episodes-title">{t.episodesTitle}</h1>
+    <p>{t.episodesIntro}</p>
+  </header>
+
+  <div class="episode-list">
+    {
+      episodes.map((episode) => {
+        const published = dateFormat.format(new Date(episode.publishedAt));
+        return (
+          <article class="episode-card">
+            <a class="episode-card-link" href={episodePath(lang, episode.slug)}>
+              <img
+                class="episode-thumbnail"
+                src={`https://i.ytimg.com/vi/${episode.youtubeId}/hqdefault.jpg`}
+                alt=""
+                loading="lazy"
+                width="480"
+                height="360"
+              />
+              <div class="episode-card-copy">
+                <div class="episode-meta">
+                  <time datetime={episode.publishedAt}>{published}</time>
+                  <span>{t.episodeDuration} {formatDuration(episode.durationSeconds)}</span>
+                </div>
+                <h2>{episode.title}</h2>
+                <span class="episode-card-arrow" aria-hidden="true">↗</span>
+              </div>
+            </a>
+          </article>
+        );
+      })
+    }
+  </div>
+</main>

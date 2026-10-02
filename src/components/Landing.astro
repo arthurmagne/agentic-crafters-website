@@ -1,5 +1,5 @@
 ---
-import { ui, type Locale } from '../i18n/ui';
+import { ui, episodesPath, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
@@ -17,7 +17,7 @@ const signalBars = Array.from({ length: 17 });
     <div class="hero-bottom">
       <h2>{t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span>{t.taglineMark}</span></h2>
       <div class="hero-copy">
-        <p>{t.heroQuestion}</p><a class="button" href="#episode-zero"
+        <p>{t.heroQuestion}</p><a class="button" href={episodesPath(lang)}
           >{t.heroCta} <span aria-hidden="true">↘</span></a
         >
       </div>

@@ -15,6 +15,7 @@ export const ui = {
     navPodcast: 'Le podcast',
     navTopics: 'Les sujets',
     navHosts: 'Les hôtes',
+    navEpisodes: 'Épisodes',
     navLabel: 'Navigation principale',
     themeToggle: 'Changer de thème',
     langLabel: 'Langue',
@@ -25,7 +26,7 @@ export const ui = {
     taglineMark: 'du logiciel.',
     heroQuestion:
       'Des conversations sincères avec celles et ceux qui vivent ces changements. Découvrez ce qui fonctionne, ce qui échoue et ce que cela change pour les équipes, les pratiques et l’avenir du métier de développeur.',
-    heroCta: 'Regarder l’épisode zéro',
+    heroCta: 'Voir tous les épisodes',
     heroMetaHosts: 'AVEC ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'RETOURS DE TERRAIN. ASTUCES. POST-MORTEMS.',
 
@@ -34,6 +35,17 @@ export const ui = {
       'Agentic Crafters, épisode zéro : Arthur Magne et Yannick Grenzinger expliquent l’intention du podcast',
     videoCaption:
       'La conversation complète entre les deux hôtes sur l’intention du podcast, son format et les questions qu’ils veulent explorer.',
+
+    episodesTitle: 'Tous les épisodes',
+    episodesMetaTitle: 'Tous les épisodes · Agentic Crafters',
+    episodesMetaDescription: 'Retrouvez tous les épisodes du podcast Agentic Crafters, du plus récent au plus ancien.',
+    episodesEyebrow: 'LE PODCAST · LES ÉPISODES',
+    episodesIntro: 'Toutes les conversations, de la plus récente à la plus ancienne.',
+    episodePublished: 'Publié le',
+    episodeDuration: 'Durée',
+    episodeWatchOnYoutube: 'Regarder sur YouTube',
+    episodeBack: 'Tous les épisodes',
+    episodeVideoFrame: 'Lecteur vidéo YouTube',
 
     approachEyebrow: '01 / LE PODCAST',
     signalCaption: 'Un instantané du terrain, épisode après épisode.',
@@ -99,6 +111,7 @@ export const ui = {
     navPodcast: 'The podcast',
     navTopics: 'The topics',
     navHosts: 'The hosts',
+    navEpisodes: 'Episodes',
     navLabel: 'Main navigation',
     themeToggle: 'Switch theme',
     langLabel: 'Language',
@@ -109,7 +122,7 @@ export const ui = {
     taglineMark: 'software.',
     heroQuestion:
       'Honest conversations with the people living it. Hear what’s working, what isn’t, and what it means for teams, craft, and the future of being a developer.',
-    heroCta: 'Watch episode zero',
+    heroCta: 'Watch All Episodes',
     heroMetaHosts: 'WITH ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'FIELD REPORTS. TIPS. POST-MORTEMS.',
 
@@ -118,6 +131,17 @@ export const ui = {
       'Agentic Crafters, episode zero: Arthur Magne and Yannick Grenzinger explain the podcast’s intent',
     videoCaption:
       'The full discussion between the two hosts about the podcast’s intent, format, and the questions they want to explore.',
+
+    episodesTitle: 'All episodes',
+    episodesMetaTitle: 'All episodes · Agentic Crafters',
+    episodesMetaDescription: 'Browse every Agentic Crafters podcast episode, from newest to oldest.',
+    episodesEyebrow: 'THE PODCAST · EPISODES',
+    episodesIntro: 'Every conversation, from newest to oldest.',
+    episodePublished: 'Published',
+    episodeDuration: 'Duration',
+    episodeWatchOnYoutube: 'Watch on YouTube',
+    episodeBack: 'All episodes',
+    episodeVideoFrame: 'YouTube video player',
 
     approachEyebrow: '01 / THE PODCAST',
     signalCaption: 'A snapshot of the field, one episode at a time.',
@@ -183,6 +207,16 @@ export function baseUrl(): string {
 export function localePath(locale: Locale): string {
   const base = baseUrl();
   return locale === 'en' ? base : `${base}fr/`;
+}
+
+/** Chemin de la liste des épisodes pour une langue. */
+export function episodesPath(locale: Locale): string {
+  return `${localePath(locale)}episodes/`;
+}
+
+/** Chemin d'une page épisode pour une langue. */
+export function episodePath(locale: Locale, slug: string): string {
+  return `${episodesPath(locale)}${encodeURIComponent(slug)}/`;
 }
 
 /** Chemin d'un fichier de `public/`, préfixé par la base de déploiement. */

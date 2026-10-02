@@ -1,0 +1,32 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Header from '../../../components/Header.astro';
+import EpisodeDetail from '../../../components/EpisodeDetail.astro';
+import Footer from '../../../components/Footer.astro';
+import { episodes, type Episode } from '../../../data/episodes';
+import { episodePath, type Locale } from '../../../i18n/ui';
+import { ui } from '../../../i18n/ui';
+
+interface Props {
+  episode: Episode;
+}
+
+export function getStaticPaths() {
+  return episodes.map((episode) => ({ params: { slug: episode.slug }, props: { episode } }));
+}
+
+const { episode } = Astro.props;
+const lang = 'fr' as const;
+const paths: Record<Locale, string> = {
+  en: episodePath('en', episode.slug),
+  fr: episodePath('fr', episode.slug),
+};
+const description = `${episode.title} · ${ui[lang].episodePublished} ${new Intl.DateTimeFormat(ui[lang].htmlLang, { dateStyle: 'long' }).format(new Date(episode.publishedAt))}.`;
+---
+
+<Base lang={lang} title={`${episode.title} · Agentic Crafters`} description={description} paths={paths}>
+  <a class="skip" href="#contenu">{ui[lang].skip}</a>
+  <Header lang={lang} currentPage="episode" episodeSlug={episode.slug} />
+  <EpisodeDetail lang={lang} episode={episode} />
+  <Footer lang={lang} />
+</Base>
