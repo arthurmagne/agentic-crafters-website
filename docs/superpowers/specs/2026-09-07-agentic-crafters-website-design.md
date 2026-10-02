@@ -229,7 +229,7 @@ français et l'autre en anglais, afin d'exercer les deux cas de figure : langue
 différente, transcript présent sur l'un et absent sur l'autre. Ils sont
 supprimés à la publication du premier épisode réel.
 
-La landing et la page `/episodes` gèrent le cas d'une collection vide en
-affichant un état « first episode coming soon ». Cet état est celui du site à la
-mise en ligne, une fois les épisodes de démonstration retirés ; il doit donc être
-implémenté et vérifié, et non traité comme un cas limite improbable.
+La landing et la page `/episodes` doivent gérer une collection vide sans
+promettre de date de publication. La page d'accueil met en avant l'épisode zéro,
+une conversation complète entre les deux hôtes qui explique l'intention du
+podcast.

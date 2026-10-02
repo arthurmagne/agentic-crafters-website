@@ -84,10 +84,9 @@ lecteur YouTube, lecteur audio Spotify, article de synthèse et transcript
 complet sur une page séparée. Voir la section 4 de la spec pour le modèle de
 contenu prévu.
 
-Seul l'épisode zéro est enregistré : Arthur et Yannick y présentent le
-podcast, sans invité. Les textes de la landing en reprennent les messages
-principaux. Aucun épisode n'est publié, la landing affiche donc toujours un état
-« podcast en préparation ».
+L'épisode zéro disponible est la conversation complète entre Arthur et Yannick
+qui explique l'intention du podcast, sans invité. La landing présente les sujets
+du podcast et dirige les visiteurs vers cette discussion.
 
 ## Points en suspens
 

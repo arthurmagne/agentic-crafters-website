@@ -17,7 +17,7 @@ const signalBars = Array.from({ length: 17 });
     <div class="hero-bottom">
       <h2>{t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span>{t.taglineMark}</span></h2>
       <div class="hero-copy">
-        <p>{t.heroQuestion}</p><a class="button" href="#approche"
+        <p>{t.heroQuestion}</p><a class="button" href="#episode-zero"
           >{t.heroCta} <span aria-hidden="true">↘</span></a
         >
       </div>
@@ -25,7 +25,7 @@ const signalBars = Array.from({ length: 17 });
     <div class="hero-meta"><span>{t.heroMetaHosts}</span><span>{t.heroMetaClaim}</span></div>
   </section>
 
-  <section class="intro-video wrap" aria-label={t.videoLabel}>
+  <section class="intro-video wrap" id="episode-zero" aria-label={t.videoLabel}>
     <div class="video-frame">
       <iframe
         src="https://www.youtube-nocookie.com/embed/-1VyWctfkXU"
@@ -104,13 +104,18 @@ const signalBars = Array.from({ length: 17 });
     <p class="audience">{t.audience}</p>
   </section>
 
-  <section class="launch" aria-labelledby="launch-titre">
-    <div class="wrap launch-inner">
+  <section class="closing" aria-labelledby="closing-titre">
+    <div class="wrap closing-inner">
       <div>
-        <p class="eyebrow">{t.launchEyebrow}</p>
-        <h2 id="launch-titre">{t.launchTitleLines[0]}<br />{t.launchTitleLines[1]}</h2>
+        <p class="eyebrow">{t.closingEyebrow}</p>
+        <h2 id="closing-titre">{t.closingTitleLines[0]}<br />{t.closingTitleLines[1]}</h2>
       </div>
-      <p>{t.launchBodyLines[0]}<br />{t.launchBodyLines[1]}</p>
+      <div class="closing-copy">
+        <p>{t.closingBody}</p>
+        <a class="button" href="#episode-zero"
+          >{t.closingCta} <span aria-hidden="true">↘</span></a
+        >
+      </div>
     </div>
   </section>
 </main>
