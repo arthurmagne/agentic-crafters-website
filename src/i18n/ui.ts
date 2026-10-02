@@ -38,8 +38,8 @@ export const ui = {
     approachEyebrow: '01 / LE PODCAST',
     signalCaption: 'Un instantané du terrain, épisode après épisode.',
     approachTitleLine1: 'Une veille collective,',
-    approachTitleLine2: 'sans ',
-    approachTitleEm: 'bullshit.',
+    approachTitleLine2: 'sans la ',
+    approachTitleEm: 'hype.',
     approachP1:
       'Chaque épisode est une conversation ouverte avec une personne d’une autre entreprise ou communauté. Elle raconte ce qu’elle a essayé, ce qui a fonctionné, ce qui a échoué et ce qu’elle en a appris.',
     approachP2:
