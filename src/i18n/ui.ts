@@ -15,36 +15,47 @@ export const ui = {
     navPodcast: 'Le podcast',
     navTopics: 'Les sujets',
     navHosts: 'Les hôtes',
+    navEpisodes: 'Épisodes',
     navLabel: 'Navigation principale',
-    status: 'En préparation',
     themeToggle: 'Changer de thème',
     langLabel: 'Langue',
     otherLangName: 'English',
 
     heroEyebrow: 'LE PODCAST · IA & DÉVELOPPEMENT LOGICIEL',
-    taglineLines: ['Quand l’IA rencontre', 'la réalité du'],
-    taglineMark: 'développement logiciel.',
+    taglineLines: ['L’IA transforme', 'comment nous créons'],
+    taglineMark: 'du logiciel.',
     heroQuestion:
-      'L’IA ne règle pas tout par magie. Comment les équipes s’adaptent-elles vraiment, et à quel prix ?',
-    heroCta: 'Découvrir le podcast',
+      'Des conversations sincères avec celles et ceux qui vivent ces changements. Découvrez ce qui fonctionne, ce qui échoue et ce que cela change pour les équipes, les pratiques et l’avenir du métier de développeur.',
+    heroCta: 'Voir tous les épisodes',
     heroMetaHosts: 'AVEC ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'RETOURS DE TERRAIN. ASTUCES. POST-MORTEMS.',
 
-    videoLabel: 'Vidéo de présentation',
+    videoLabel: 'Conversation complète de l’épisode zéro',
     videoTitle:
-      'Agentic Crafters, épisode zéro : Arthur Magne et Yannick Grenzinger présentent le podcast',
+      'Agentic Crafters, épisode zéro : Arthur Magne et Yannick Grenzinger expliquent l’intention du podcast',
     videoCaption:
-      'Épisode zéro. Arthur Magne et Yannick Grenzinger présentent le podcast, son format et ce qu’ils veulent explorer.',
+      'La conversation complète entre les deux hôtes sur l’intention du podcast, son format et les questions qu’ils veulent explorer.',
+
+    episodesTitle: 'Tous les épisodes',
+    episodesMetaTitle: 'Tous les épisodes · Agentic Crafters',
+    episodesMetaDescription: 'Retrouvez tous les épisodes du podcast Agentic Crafters, du plus récent au plus ancien.',
+    episodesEyebrow: 'LE PODCAST · LES ÉPISODES',
+    episodesIntro: 'Toutes les conversations, de la plus récente à la plus ancienne.',
+    episodePublished: 'Publié le',
+    episodeDuration: 'Durée',
+    episodeWatchOnYoutube: 'Regarder sur YouTube',
+    episodeBack: 'Tous les épisodes',
+    episodeVideoFrame: 'Lecteur vidéo YouTube',
 
     approachEyebrow: '01 / LE PODCAST',
     signalCaption: 'Un instantané du terrain, épisode après épisode.',
     approachTitleLine1: 'Une veille collective,',
-    approachTitleLine2: 'sans ',
-    approachTitleEm: 'bullshit.',
+    approachTitleLine2: 'sans la ',
+    approachTitleEm: 'hype.',
     approachP1:
-      'Tout va trop vite pour faire sa veille seul. À chaque épisode, un invité, en entreprise, en association ou indépendant, raconte ce qui marche, ce qui coince et ce qu’il en a appris. Des astuces et des post-mortems, loin des discours marketing.',
+      'Chaque épisode est une conversation ouverte avec une personne d’une autre entreprise ou communauté. Elle raconte ce qu’elle a essayé, ce qui a fonctionné, ce qui a échoué et ce qu’elle en a appris.',
     approachP2:
-      'Agentic, parce que travailler avec des agents IA est le sujet du moment. Crafters, parce que les valeurs du software craftsmanship, l’exigence et le partage des connaissances, comptent plus que jamais : faire un logiciel dont les utilisateurs sont fiers.',
+      'Nous faisons vivre les valeurs du software craftsmanship — le soin, l’exigence et le partage des connaissances — dans un monde transformé par l’IA. Nous explorons comment les équipes maintiennent la qualité, organisent le travail et les revues de code, et prennent en compte la charge cognitive.',
     approachTakeaway:
       'Ce qui est vrai aujourd’hui sera sans doute faux dans six mois. Alors on aimerait réinviter nos invités pour voir ce qui a changé.',
 
@@ -61,7 +72,7 @@ export const ui = {
       },
       {
         titleLines: ['L’avenir', 'du métier'],
-        body: 'Juniors, nouveaux rôles, open source, produits codés en un week-end : quel sens garde le métier de développeur, en 2026 comme en 2040 ?',
+        body: 'Nouvelles compétences, métiers émergents et place des juniors : comment le métier évolue-t-il, et comment repérer les signaux utiles dans le flot d’outils et d’informations ?',
       },
     ],
 
@@ -77,12 +88,11 @@ export const ui = {
     audience:
       'Pour les développeurs, tech leads, architectes et engineering managers qui veulent apprendre de leurs pairs, et pour les juniors et étudiants qui s’interrogent sur l’avenir du métier.',
 
-    launchEyebrow: 'LA SUITE S’ÉCRIT AU MICRO',
-    launchTitleLines: ['On se retrouve', 'bientôt à l’écoute.'],
-    launchBodyLines: [
-      'Un épisode zéro pour poser le cadre, puis des invités francophones et anglophones.',
-      'Les épisodes et les liens d’écoute arriveront ici.',
-    ],
+    closingEyebrow: 'LA CONVERSATION COMPLÈTE',
+    closingTitleLines: ['L’épisode zéro :', 'l’intention du podcast'],
+    closingBody:
+      'Arthur Magne et Yannick Grenzinger expliquent pourquoi ils ont lancé Agentic Crafters et les sujets qu’ils veulent explorer.',
+    closingCta: 'Regarder la conversation complète',
 
     footerTagline: 'Quand l’IA rencontre la réalité du développement logiciel.',
     footerTop: 'Retour en haut',
@@ -101,26 +111,37 @@ export const ui = {
     navPodcast: 'The podcast',
     navTopics: 'The topics',
     navHosts: 'The hosts',
+    navEpisodes: 'Episodes',
     navLabel: 'Main navigation',
-    status: 'In preparation',
     themeToggle: 'Switch theme',
     langLabel: 'Language',
     otherLangName: 'Français',
 
     heroEyebrow: 'THE PODCAST · AI & SOFTWARE DEVELOPMENT',
-    taglineLines: ['Where AI meets', 'the reality of'],
-    taglineMark: 'software development.',
+    taglineLines: ['AI is reshaping', 'how we create'],
+    taglineMark: 'software.',
     heroQuestion:
-      'AI is no magic fix. How are teams really adapting, and at what cost?',
-    heroCta: 'Discover the podcast',
+      'Honest conversations with the people living it. Hear what’s working, what isn’t, and what it means for teams, craft, and the future of being a developer.',
+    heroCta: 'Watch All Episodes',
     heroMetaHosts: 'WITH ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'FIELD REPORTS. TIPS. POST-MORTEMS.',
 
-    videoLabel: 'Introduction video',
+    videoLabel: 'Full episode zero discussion',
     videoTitle:
-      'Agentic Crafters, episode zero: Arthur Magne and Yannick Grenzinger introduce the podcast',
+      'Agentic Crafters, episode zero: Arthur Magne and Yannick Grenzinger explain the podcast’s intent',
     videoCaption:
-      'Episode zero. Arthur Magne and Yannick Grenzinger introduce the podcast, its format and what they want to explore.',
+      'The full discussion between the two hosts about the podcast’s intent, format, and the questions they want to explore.',
+
+    episodesTitle: 'All episodes',
+    episodesMetaTitle: 'All episodes · Agentic Crafters',
+    episodesMetaDescription: 'Browse every Agentic Crafters podcast episode, from newest to oldest.',
+    episodesEyebrow: 'THE PODCAST · EPISODES',
+    episodesIntro: 'Every conversation, from newest to oldest.',
+    episodePublished: 'Published',
+    episodeDuration: 'Duration',
+    episodeWatchOnYoutube: 'Watch on YouTube',
+    episodeBack: 'All episodes',
+    episodeVideoFrame: 'YouTube video player',
 
     approachEyebrow: '01 / THE PODCAST',
     signalCaption: 'A snapshot of the field, one episode at a time.',
@@ -128,9 +149,9 @@ export const ui = {
     approachTitleLine2: 'minus the ',
     approachTitleEm: 'hype.',
     approachP1:
-      'Things move too fast to keep up alone. In each episode, a guest, from a company, a non-profit or working independently, shares what works, what doesn’t, and what they learned. Tips and post-mortems, not marketing talk.',
+      'Each episode is an open conversation with someone from a different company or community. They share what they tried, what worked, what failed, and what they learned.',
     approachP2:
-      'Agentic, because working with AI agents is the question of the moment. Crafters, because the values of software craftsmanship, high standards and shared knowledge, matter more than ever: building software its users are proud of.',
+      'We bring the values of software craftsmanship—care, excellence, and shared knowledge—to a fast-changing, AI-enabled world. We explore how teams maintain quality, organise work and code review, and manage cognitive load.',
     approachTakeaway:
       'What holds true today will probably be wrong in six months. So we’d like to invite our guests back and see what changed.',
 
@@ -147,7 +168,7 @@ export const ui = {
       },
       {
         titleLines: ['The future', 'of the craft'],
-        body: 'Juniors, new roles, open source, products built in a weekend: what does being a developer mean, in 2026 and in 2040?',
+        body: 'Emerging skills and roles, and where juniors fit: how is the job changing, and how do we find useful signals amid the flood of new tools and information?',
       },
     ],
 
@@ -163,12 +184,11 @@ export const ui = {
     audience:
       'For developers, tech leads, architects and engineering managers who want to learn from their peers, and for juniors and students wondering where the job is heading.',
 
-    launchEyebrow: 'THE REST IS ON ITS WAY',
-    launchTitleLines: ['Coming soon', 'to your ears.'],
-    launchBodyLines: [
-      'An episode zero to set the scene, then guests in French and in English.',
-      'Episodes and listening links will land here.',
-    ],
+    closingEyebrow: 'THE FULL CONVERSATION',
+    closingTitleLines: ['Episode zero:', 'why this podcast'],
+    closingBody:
+      'Arthur Magne and Yannick Grenzinger explain why they started Agentic Crafters and what they want to explore.',
+    closingCta: 'Watch the full conversation',
 
     footerTagline: 'Where AI meets the reality of software development.',
     footerTop: 'Back to top',
@@ -187,6 +207,16 @@ export function baseUrl(): string {
 export function localePath(locale: Locale): string {
   const base = baseUrl();
   return locale === 'en' ? base : `${base}fr/`;
+}
+
+/** Chemin de la liste des épisodes pour une langue. */
+export function episodesPath(locale: Locale): string {
+  return `${localePath(locale)}episodes/`;
+}
+
+/** Chemin d'une page épisode pour une langue. */
+export function episodePath(locale: Locale, slug: string): string {
+  return `${episodesPath(locale)}${encodeURIComponent(slug)}/`;
 }
 
 /** Chemin d'un fichier de `public/`, préfixé par la base de déploiement. */

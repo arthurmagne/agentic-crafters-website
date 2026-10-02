@@ -6,7 +6,7 @@
     { "file": "Episode.dc.html",    "x": 0,    "y": 2480, "w": 1440, "h": 2400, "title": "Page épisode — direction A" }
   ],
   "annotations": [
-    { "id": "brief", "x": 0, "y": -320, "w": 940, "text": "Trois directions pour la landing, sur un contenu strictement identique.\nA : monochrome + vert, Geist. B : sombre + ambre, JetBrains Mono. C : affiche, Anton + un aplat vermillon.\n\nLes crochets marquent ce qui reste à remplir : [GUEST NAME], [ROLE], [COMPANY].\nLes blocs PLACEHOLDER en pointillés marquent les images à produire.\nLes deux épisodes listés sont des exemples : au lancement, la section affichera « first episode coming soon »." },
+    { "id": "brief", "x": 0, "y": -320, "w": 940, "text": "Trois directions pour la landing, sur un contenu strictement identique.\nA : monochrome + vert, Geist. B : sombre + ambre, JetBrains Mono. C : affiche, Anton + un aplat vermillon.\n\nLes crochets marquent ce qui reste à remplir : [GUEST NAME], [ROLE], [COMPANY].\nLes blocs PLACEHOLDER en pointillés marquent les images à produire.\nAu lancement, la page met en avant l'épisode zéro : une conversation complète entre les deux hôtes pour expliquer l'intention du podcast." },
     { "id": "episode-note", "x": 1560, "y": 2480, "w": 640, "text": "La page épisode, dessinée dans la direction A.\n\nElle valide la STRUCTURE, pas l'habillage : vidéo, audio, résumé dans l'autre langue, article, transcript.\nJe la redessinerai dans la direction que tu retiens.\n\nL'épisode de démonstration est en anglais avec le résumé court en français, pour montrer les deux langues sur une même page." }
   ],
   "launch": { "view": "canvas" }

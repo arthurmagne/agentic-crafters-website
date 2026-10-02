@@ -1,0 +1,42 @@
+---
+import type { Episode } from '../data/episodes';
+import { formatDuration } from '../data/episodes';
+import { ui, episodesPath, type Locale } from '../i18n/ui';
+
+interface Props {
+  lang: Locale;
+  episode: Episode;
+}
+
+const { lang, episode } = Astro.props;
+const t = ui[lang];
+const published = new Intl.DateTimeFormat(t.htmlLang, {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+}).format(new Date(episode.publishedAt));
+const youtubeUrl = `https://www.youtube.com/watch?v=${episode.youtubeId}`;
+---
+
+<main id="contenu" class="episode-detail wrap" aria-labelledby="episode-title">
+  <a class="episode-back" href={episodesPath(lang)}>← {t.episodeBack}</a>
+  <header class="episode-detail-heading">
+    <div class="episode-meta">
+      <span>{t.episodePublished} <time datetime={episode.publishedAt}>{published}</time></span>
+      <span>{t.episodeDuration} {formatDuration(episode.durationSeconds)}</span>
+    </div>
+    <h1 id="episode-title">{episode.title}</h1>
+  </header>
+  <div class="episode-player">
+    <iframe
+      src={`https://www.youtube-nocookie.com/embed/${episode.youtubeId}`}
+      title={`${episode.title} — ${t.episodeVideoFrame}`}
+      loading="lazy"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+      allowfullscreen></iframe>
+  </div>
+  <a class="episode-youtube-link" href={youtubeUrl} target="_blank" rel="noopener noreferrer">
+    {t.episodeWatchOnYoutube} <span aria-hidden="true">↗</span>
+  </a>
+</main>

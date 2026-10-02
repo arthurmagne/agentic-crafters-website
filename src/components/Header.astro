@@ -1,25 +1,34 @@
 ---
-import { ui, locales, localePath, type Locale } from '../i18n/ui';
+import { ui, locales, localePath, episodesPath, episodePath, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
+  currentPage?: 'home' | 'episodes' | 'episode';
+  episodeSlug?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, currentPage = 'home', episodeSlug } = Astro.props;
 const t = ui[lang];
+const sectionHref = (section: string) =>
+  currentPage === 'home' ? `#${section}` : `${localePath(lang)}#${section}`;
+const pageHref = (locale: Locale) => {
+  if (currentPage === 'episodes') return episodesPath(locale);
+  if (currentPage === 'episode' && episodeSlug) return episodePath(locale, episodeSlug);
+  return localePath(locale);
+};
 ---
 
 <header class="header wrap">
-  <a class="wordmark" href={localePath(lang)} aria-label={t.homeLabel}
-    >ac<span aria-hidden="true">↗</span></a
-  >
-  <nav aria-label={t.navLabel}
-    ><a href="#approche">{t.navPodcast}</a><a href="#sujets">{t.navTopics}</a><a href="#hotes"
-      >{t.navHosts}</a
-    ></nav
-  >
+  <a class="wordmark" href={localePath(lang)} aria-label={t.homeLabel}>Agentic Crafter</a>
+  <nav aria-label={t.navLabel}>
+    <a href={sectionHref('approche')}>{t.navPodcast}</a>
+    <a href={sectionHref('sujets')}>{t.navTopics}</a>
+    <a href={sectionHref('hotes')}>{t.navHosts}</a>
+    <a href={episodesPath(lang)} aria-current={currentPage === 'episodes' ? 'page' : undefined}
+      >{t.navEpisodes}</a
+    >
+  </nav>
   <div class="header-end">
-    <span class="status"><i aria-hidden="true"></i>{t.status}</span>
     <p class="lang" aria-label={t.langLabel}>
       {
         /* Ordre fixe : la langue courante est signalée par aria-current, jamais
@@ -28,7 +37,7 @@ const t = ui[lang];
           <>
             {index > 0 && <em aria-hidden="true">/</em>}
             <a
-              href={localePath(code)}
+              href={pageHref(code)}
               lang={ui[code].htmlLang}
               hreflang={ui[code].htmlLang}
               aria-current={code === lang ? 'true' : undefined}
