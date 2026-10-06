@@ -7,13 +7,18 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = ui[lang];
+// La couverture de la vidéo vit dans un srcdoc transparent : un simple lien
+// plein cadre, posé sur la couverture dessinée par la page. Au clic, l'iframe
+// navigue vers le lecteur YouTube en lecture auto. Rien n'est chargé chez
+// YouTube avant le clic, et la page ne gagne aucun script.
+const videoCoverDoc = `<style>html,body{margin:0;height:100%}a{position:fixed;inset:0;cursor:pointer}a:focus-visible{outline-offset:-6px}span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}</style><a href="https://www.youtube-nocookie.com/embed/-1VyWctfkXU?autoplay=1"><span>${t.videoCoverCta}</span></a>`;
 const signalBars = Array.from({ length: 17 });
 ---
 
 <main id="contenu">
   <section class="hero wrap" aria-labelledby="titre">
     <div class="eyebrow">{t.heroEyebrow}</div>
-    <h1 id="titre">agentic<span class="second">crafters<span class="period">.</span></span></h1>
+    <h1 id="titre">agentic<span class="second">crafters</span></h1>
     <div class="hero-bottom">
       <h2>{t.taglineLines[0]}<br />{t.taglineLines[1]}<br /><span>{t.taglineMark}</span></h2>
       <div class="hero-copy">
@@ -27,12 +32,18 @@ const signalBars = Array.from({ length: 17 });
 
   <section class="intro-video wrap" id="episode-zero" aria-label={t.videoLabel}>
     <div class="video-frame">
+      <div class="video-cover" aria-hidden="true">
+        <span class="eyebrow">{t.videoCoverEyebrow}</span>
+        <span class="video-cover-title"
+          >{t.videoCoverTitleLines[0]}<br />{t.videoCoverTitleLines[1]}</span
+        >
+        <span class="button">{t.videoCoverCta} <span>▶</span></span>
+      </div>
       <iframe
-        src="https://www.youtube-nocookie.com/embed/-1VyWctfkXU"
+        srcdoc={videoCoverDoc}
         title={t.videoTitle}
-        loading="lazy"
         referrerpolicy="strict-origin-when-cross-origin"
-        allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
     <p class="video-caption">{t.videoCaption}</p>

@@ -35,6 +35,9 @@ export const ui = {
       'Agentic Crafters, épisode zéro : Arthur Magne et Yannick Grenzinger expliquent l’intention du podcast',
     videoCaption:
       'La conversation complète entre les deux hôtes sur l’intention du podcast, son format et les questions qu’ils veulent explorer.',
+    videoCoverEyebrow: 'ÉPISODE ZÉRO',
+    videoCoverTitleLines: ['Pourquoi', 'ce podcast'],
+    videoCoverCta: 'Regarder l’épisode',
 
     episodesTitle: 'Tous les épisodes',
     episodesMetaTitle: 'Tous les épisodes · Agentic Crafters',
@@ -131,6 +134,9 @@ export const ui = {
       'Agentic Crafters, episode zero: Arthur Magne and Yannick Grenzinger explain the podcast’s intent',
     videoCaption:
       'The full discussion between the two hosts about the podcast’s intent, format, and the questions they want to explore.',
+    videoCoverEyebrow: 'EPISODE ZERO',
+    videoCoverTitleLines: ['Why this', 'podcast'],
+    videoCoverCta: 'Watch the episode',
 
     episodesTitle: 'All episodes',
     episodesMetaTitle: 'All episodes · Agentic Crafters',
