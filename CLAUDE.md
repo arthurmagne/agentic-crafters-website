@@ -58,9 +58,12 @@ courante étant signalée par `aria-current` et non par sa position.
 ## Identité visuelle
 
 Le design vient d'une maquette HTML et CSS validée par Arthur, portée fidèlement
-dans `global.css`. Space Grotesk en display, DM Sans en texte, accent vert acide
-`#cefb55`, bandeau sombre inversé pour la section « approach », bandeau acide
-pour la section finale.
+dans `global.css`, puis recoloré d'après la charte d'une web designer. Space
+Grotesk en display, DM Sans en texte, encre `#052023` sur fond `#EAF3EE`, accent
+en dégradé vert acide `#D8FF72 → #EAFF74` (`--acid-gradient`), boutons en
+pilule. Bandeaux sombres `#052023` pour la section « approach » et la section
+finale. Le hero porte un visuel décoratif, `src/assets/hero-visual.webp`, posé
+en arrière-plan via `.hero::before`.
 
 Thème clair uniquement pour l'instant. **Un thème sombre est prévu** : toute la
 couleur doit donc continuer de passer par les jetons CSS de `:root`, jamais par
@@ -92,7 +95,8 @@ du podcast et dirige les visiteurs vers cette discussion.
 
 - Lien LinkedIn d'Arthur. Son poste, « CPO & cofondateur · Packmind », vient
   de l'épisode zéro.
-- Portraits des deux hôtes, et visuels d'épisode. Le site n'a aucune image.
+- Portraits des deux hôtes, et visuels d'épisode.
+- Le visuel du hero pèse 1,6 Mo : à recompresser.
 - Ancres de sections encore en français (`#approche`, `#sujets`, `#hotes`,
   `#contenu`) sur un site désormais anglophone.
 - Polices chargées depuis Google Fonts ; les auto-héberger supprimerait une
