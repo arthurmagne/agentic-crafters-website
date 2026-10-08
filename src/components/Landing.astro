@@ -1,6 +1,7 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import { ui, episodesPath, type Locale } from '../i18n/ui';
+import heroVisual from '../assets/hero-visual.webp';
 import arthurPortrait from '../assets/hosts/arthur-magne.jpg';
 import yannickPortrait from '../assets/hosts/yannick-grenzinger.jpg';
 
@@ -20,6 +21,20 @@ const signalBars = Array.from({ length: 17 });
 
 <main id="contenu">
   <section class="hero wrap" aria-labelledby="titre">
+    <Picture
+      class="hero-artwork"
+      src={heroVisual}
+      alt=""
+      formats={['avif', 'webp']}
+      fallbackFormat="webp"
+      aria-hidden="true"
+      widths={[360, 480, 768, 1101, 1652, 2202]}
+      sizes="(max-width: 1088px) 100vw, 1088px"
+      quality={78}
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    />
     <div class="eyebrow">{t.heroEyebrow}</div>
     <h1 id="titre">agentic<span class="second">crafters</span></h1>
     <div class="hero-bottom">
