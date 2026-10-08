@@ -95,7 +95,7 @@ du podcast et dirige les visiteurs vers cette discussion.
 
 - Lien LinkedIn d'Arthur. Son poste, « CPO & cofondateur · Packmind », vient
   de l'épisode zéro.
-- Portraits des deux hôtes, et visuels d'épisode.
+- Visuels d’épisode.
 - Le visuel du hero pèse 1,6 Mo : à recompresser.
 - Ancres de sections encore en français (`#approche`, `#sujets`, `#hotes`,
   `#contenu`) sur un site désormais anglophone.

@@ -1,5 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import { ui, episodesPath, type Locale } from '../i18n/ui';
+import arthurPortrait from '../assets/hosts/arthur-magne.jpg';
+import yannickPortrait from '../assets/hosts/yannick-grenzinger.jpg';
 
 interface Props {
   lang: Locale;
@@ -96,11 +99,11 @@ const signalBars = Array.from({ length: 17 });
     </div>
     <div class="host-grid">
       <article class="host">
-        <span class="initials" aria-hidden="true">AM</span>
+        <Image class="portrait" src={arthurPortrait} alt="" widths={[120, 240]} sizes="120px" />
         <div><h3>Arthur Magne</h3><p>{t.arthurRole}</p><p class="bio">{t.arthurBio}</p></div>
       </article>
       <article class="host">
-        <span class="initials" aria-hidden="true">YG</span>
+        <Image class="portrait" src={yannickPortrait} alt="" widths={[120, 240]} sizes="120px" />
         <div>
           <h3>Yannick Grenzinger</h3><p>{t.yannickRole}</p><p class="bio">{t.yannickBio}</p><a
             href="https://www.linkedin.com/in/yannickgrenzinger/"
