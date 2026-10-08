@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { ui, localePath, asset, otherLocale, type Locale } from '../i18n/ui';
+import spaceGroteskLatinFont from '../assets/fonts/space-grotesk-latin.woff2';
 
 interface Props {
   lang: Locale;
@@ -27,6 +28,13 @@ const defaultHref = new URL(Astro.props.paths?.en ?? localePath('en'), Astro.sit
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="theme-color" content="#052023" />
+    <link
+      rel="preload"
+      href={spaceGroteskLatinFont}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
 
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang={t.htmlLang} href={canonical} />
