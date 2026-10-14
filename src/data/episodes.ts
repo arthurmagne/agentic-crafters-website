@@ -4,6 +4,8 @@ export interface Episode {
   title: string;
   publishedAt: string;
   durationSeconds: number;
+  /** Épisode retiré du site : ni carte dans la liste, ni page générée. */
+  hidden?: boolean;
 }
 
 const episodeRecords: Episode[] = [
@@ -13,6 +15,7 @@ const episodeRecords: Episode[] = [
     title: "L'IA au quotidien des équipes : vitesse, contexte et maîtrise - Arnaud Héritier (Docker)",
     publishedAt: '2026-09-30T07:08:16-07:00',
     durationSeconds: 3369,
+    hidden: true,
   },
   {
     slug: 'episode-zero',
@@ -23,9 +26,9 @@ const episodeRecords: Episode[] = [
   },
 ];
 
-export const episodes = [...episodeRecords].sort(
-  (a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt),
-);
+export const episodes = episodeRecords
+  .filter((episode) => !episode.hidden)
+  .sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 
 export function formatDuration(seconds: number): string {
   const minutes = Math.floor(seconds / 60);
