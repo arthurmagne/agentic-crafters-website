@@ -15,7 +15,6 @@ const episodeRecords: Episode[] = [
     title: "L'IA au quotidien des équipes : vitesse, contexte et maîtrise - Arnaud Héritier (Docker)",
     publishedAt: '2026-09-30T07:08:16-07:00',
     durationSeconds: 3369,
-    hidden: true,
   },
   {
     slug: 'episode-zero',
