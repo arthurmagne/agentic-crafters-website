@@ -17,6 +17,9 @@ const t = ui[lang];
 // YouTube avant le clic, et la page ne gagne aucun script.
 const videoCoverDoc = `<style>html,body{margin:0;height:100%}a{position:fixed;inset:0;cursor:pointer}a:focus-visible{outline-offset:-6px}span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}</style><a href="https://www.youtube-nocookie.com/embed/-1VyWctfkXU?autoplay=1"><span>${t.videoCoverCta}</span></a>`;
 const signalBars = Array.from({ length: 17 });
+import PlatformLinks from './PlatformLinks.astro';
+import { channelUrls, type Platform } from '../data/platforms';
+const platforms: Platform[] = ['youtube', 'spotify', 'apple'];
 ---
 
 <main id="contenu">
@@ -43,6 +46,11 @@ const signalBars = Array.from({ length: 17 });
         <p>{t.heroQuestion}</p><a class="button" href={episodesPath(lang)}
           >{t.heroCta} <span aria-hidden="true">↘</span></a
         >
+        <PlatformLinks
+          class="hero-platforms"
+          label={t.platformsLabel}
+          links={platforms.map((platform) => ({ platform, href: channelUrls[platform] }))}
+        />
       </div>
     </div>
     <div class="hero-meta"><span>{t.heroMetaHosts}</span><span>{t.heroMetaClaim}</span></div>

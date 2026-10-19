@@ -21,7 +21,7 @@ const paths: Record<Locale, string> = {
   en: episodePath('en', episode.slug),
   fr: episodePath('fr', episode.slug),
 };
-const description = `${episode.title} · ${ui[lang].episodePublished} ${new Intl.DateTimeFormat(ui[lang].htmlLang, { dateStyle: 'long' }).format(new Date(episode.publishedAt))}.`;
+const description = episode.summary?.[lang] ?? `${episode.title} · ${ui[lang].episodePublished} ${new Intl.DateTimeFormat(ui[lang].htmlLang, { dateStyle: 'long' }).format(new Date(episode.publishedAt))}.`;
 ---
 
 <Base lang={lang} title={`${episode.title} · Agentic Crafters`} description={description} paths={paths}>

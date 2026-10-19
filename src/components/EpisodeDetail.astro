@@ -1,7 +1,10 @@
 ---
 import type { Episode } from '../data/episodes';
 import { formatDuration } from '../data/episodes';
-import { ui, episodesPath, type Locale } from '../i18n/ui';
+import { getArticle, getTranscript } from '../data/episodeContent';
+import PlatformLinks from './PlatformLinks.astro';
+import type { Platform } from '../data/platforms';
+import { ui, episodesPath, transcriptPath, type Locale } from '../i18n/ui';
 
 interface Props {
   lang: Locale;
@@ -16,6 +19,18 @@ const published = new Intl.DateTimeFormat(t.htmlLang, {
   year: 'numeric',
 }).format(new Date(episode.publishedAt));
 const youtubeUrl = `https://www.youtube.com/watch?v=${episode.youtubeId}`;
+const Article = getArticle(episode.slug, lang);
+const transcript = getTranscript(episode.slug);
+// Chaque réplique : « [mm:ss] Intervenant » puis le texte, séparées par une ligne vide.
+const transcriptBlocks = (transcript ?? '').split(/\n\s*\n/).map((chunk) => {
+  const [heading, ...rest] = chunk.trim().split('\n');
+  return { heading, text: rest.join(' ') };
+});
+const listenLinks = [
+  { platform: 'youtube' as const, href: youtubeUrl },
+  { platform: 'spotify' as const, href: episode.spotifyUrl },
+  { platform: 'apple' as const, href: episode.applePodcastsUrl },
+].filter((link): link is { platform: Platform; href: string } => Boolean(link.href));
 ---
 
 <main id="contenu" class="episode-detail wrap" aria-labelledby="episode-title">
@@ -26,6 +41,18 @@ const youtubeUrl = `https://www.youtube.com/watch?v=${episode.youtubeId}`;
       <span>{t.episodeDuration} {formatDuration(episode.durationSeconds)}</span>
     </div>
     <h1 id="episode-title">{episode.title}</h1>
+    {
+      episode.guest && (
+        <p class="episode-guest">
+          <span>{t.episodeGuest}</span>{' '}
+          {episode.guest.linkedin ? (
+            <a href={episode.guest.linkedin} target="_blank" rel="noopener noreferrer">{episode.guest.name}</a>
+          ) : (
+            <strong>{episode.guest.name}</strong>
+          )}<span class="episode-guest-role">, {episode.guest.role[lang]}</span>
+        </p>
+      )
+    }
   </header>
   <div class="episode-player">
     <iframe
@@ -36,7 +63,40 @@ const youtubeUrl = `https://www.youtube.com/watch?v=${episode.youtubeId}`;
       allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
       allowfullscreen></iframe>
   </div>
-  <a class="episode-youtube-link" href={youtubeUrl} target="_blank" rel="noopener noreferrer">
-    {t.episodeWatchOnYoutube} <span aria-hidden="true">↗</span>
-  </a>
+  <PlatformLinks class="episode-listen" label={t.episodeListenOn} links={listenLinks} />
+
+  {
+    Article && (
+      <article class="episode-article" aria-labelledby="episode-article-title">
+        <h2 id="episode-article-title">{t.episodeArticleTitle}</h2>
+        {t.episodeArticleNote && <p class="episode-article-note">{t.episodeArticleNote}</p>}
+        <div class="episode-prose">
+          <Article />
+        </div>
+      </article>
+    )
+  }
+
+  {
+    transcript && (
+      <section class="episode-transcript" aria-labelledby="episode-transcript-title">
+        <h2 id="episode-transcript-title">{t.episodeTranscriptTitle}</h2>
+        <p class="episode-transcript-note">
+          {t.episodeTranscriptNote}{' '}
+          <a href={transcriptPath(episode.slug)}>{t.episodeTranscriptRaw}</a>
+        </p>
+        <div class="episode-transcript-body" tabindex="0" lang="fr">
+          {
+            transcriptBlocks.map((block) => (
+              <p>
+                <strong>{block.heading}</strong>
+                <br />
+                {block.text}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+    )
+  }
 </main>

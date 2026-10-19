@@ -79,17 +79,21 @@ le build sans déployer.
 est configuré dans les réglages Pages du dépôt, et **il n'y a pas de fichier
 `public/CNAME`** : le domaine n'est donc pas reproductible depuis le dépôt seul.
 
-## État actuel
+## Épisodes
 
-La landing existe dans les deux langues. **Il n'y a aucune page épisode**, alors
-que c'est l'objet principal du projet : chaque épisode doit avoir sa page avec
-lecteur YouTube, lecteur audio Spotify, article de synthèse et transcript
-complet sur une page séparée. Voir la section 4 de la spec pour le modèle de
-contenu prévu.
+Les métadonnées sont dans `src/data/episodes.ts` (invité, liens Spotify et Apple
+Podcasts, résumé). Le contenu éditorial est rangé par épisode dans
+`src/content/episodes/<slug>/` : `article.fr.md`, `article.en.md`, `transcript.txt`
+et `glossary.json`, chargés par `src/data/episodeContent.ts`. Chaque fichier est
+optionnel. Le transcript brut est aussi servi en `/episodes/<slug>/transcript.txt`.
 
-L'épisode zéro disponible est la conversation complète entre Arthur et Yannick
-qui explique l'intention du podcast, sans invité. La landing présente les sujets
-du podcast et dirige les visiteurs vers cette discussion.
+Pour publier un nouvel épisode, suivre la skill `.claude/skills/publish-episode`.
+Le transcript se prépare avec `scripts/prepare-transcript.py` à partir de l'export
+CSV de Zencastr.
+
+Les liens vers la chaîne sur YouTube, Spotify et Apple Podcasts sont centralisés dans
+`src/data/platforms.ts` et affichés sur la landing et les pages épisode avec des icônes
+SVG inline (`PlatformIcon.astro`).
 
 ## Points en suspens
 

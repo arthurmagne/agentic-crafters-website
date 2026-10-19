@@ -57,3 +57,38 @@ html{scroll-padding-top:100px}
 main{overflow-x:clip}
 .hero{position:relative;isolation:isolate}
 .hero-artwork{position:absolute;z-index:-1;top:0;left:calc(50% - 50vw);width:min(100vw,1088px);height:auto;max-height:900px;object-fit:contain;object-position:left top;pointer-events:none}
+
+/* Episode page: guest, listen links, article and transcript */
+.episode-guest{margin:18px 0 0;font-size:19px;color:var(--muted)}
+.episode-guest>span:first-child{font-family:var(--display);font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-right:6px}
+.episode-guest a,.episode-guest strong{color:var(--ink);font-weight:600}
+.episode-article,.episode-transcript{max-width:760px;margin-top:clamp(56px,8vw,88px)}
+.episode-article h2,.episode-transcript h2{font-family:var(--display);font-size:clamp(28px,4vw,40px);font-weight:500;letter-spacing:-.04em;line-height:1.1;margin:0 0 20px}
+.episode-article-note,.episode-transcript-note{font-size:15px;color:var(--muted);margin:0 0 24px}
+.episode-prose{font-size:19px;line-height:1.7}
+.episode-prose h3{font-family:var(--display);font-size:24px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin:40px 0 12px}
+.episode-prose p{margin:0 0 18px}
+.episode-prose ul{margin:0 0 18px;padding-left:22px}
+.episode-prose li{margin-bottom:8px}
+.episode-prose blockquote{margin:28px 0;padding:4px 0 4px 22px;border-left:4px solid var(--acid);font-family:var(--display);font-size:22px;line-height:1.4}
+.episode-prose blockquote p{margin:0}
+.episode-transcript-body{max-height:480px;overflow:auto;margin:0;padding:24px;border:1px solid var(--line-strong);background:var(--surface);font-family:var(--body);font-size:15px;line-height:1.65;overflow-wrap:anywhere}
+.episode-transcript-body p{margin:0 0 16px}.episode-transcript-body p:last-child{margin:0}.episode-transcript-body strong{font-weight:600}
+.episode-transcript-body:focus-visible{outline:3px solid #426a00;outline-offset:4px}
+@media(max-width:600px){.episode-prose{font-size:17px}.episode-prose h3{font-size:21px}.episode-transcript-body{max-height:380px;padding:18px;font-size:14px}}
+
+/* Platform links (YouTube, Spotify, Apple Podcasts) */
+.platform-links{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px}
+.platform-links-label{font-size:14px;color:var(--muted)}
+.platform-links ul{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+.platform-links a{--icon-cut:var(--paper);display:inline-flex;align-items:center;gap:9px;padding:8px 16px 8px 12px;border:1px solid var(--line-strong);border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;color:var(--ink)}
+.platform-links a:hover{background:var(--acid-gradient);border-color:var(--ink);--icon-cut:var(--acid)}
+.platform-icon{flex:0 0 auto;display:block}
+.episode-listen{margin-top:22px}
+.hero-platforms{margin-top:28px}
+.hero-platforms .platform-links-label{width:100%}
+@media(max-width:600px){.platform-links a{font-size:14px;padding:7px 13px 7px 10px}}
+
+/* Episode pages sit below the fixed site navigation, like the episodes index. */
+.episode-detail{padding-top:calc(100px + 40px)}
+@media(max-width:650px){.episode-detail{padding-top:150px}}

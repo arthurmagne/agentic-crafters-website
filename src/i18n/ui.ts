@@ -27,6 +27,7 @@ export const ui = {
     heroQuestion:
       'Des conversations sincères avec celles et ceux qui vivent ces changements. Découvrez ce qui fonctionne, ce qui échoue et ce que cela change pour les équipes, les pratiques et l’avenir du métier de développeur.',
     heroCta: 'Voir tous les épisodes',
+    platformsLabel: 'Écouter et regarder sur',
     heroMetaHosts: 'AVEC ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'RETOURS DE TERRAIN. ASTUCES. POST-MORTEMS.',
 
@@ -49,6 +50,14 @@ export const ui = {
     episodeWatchOnYoutube: 'Regarder sur YouTube',
     episodeBack: 'Tous les épisodes',
     episodeVideoFrame: 'Lecteur vidéo YouTube',
+    episodeListenOn: 'Écouter l’épisode',
+    episodeGuest: 'Invité',
+    episodeArticleTitle: 'L’essentiel de l’épisode',
+    episodeArticleNote: '',
+    episodeTranscriptTitle: 'Transcript complet',
+    episodeTranscriptNote:
+      'Transcription automatique de la conversation, en français. Sélectionnez le texte du cadre pour le copier, ou ouvrez-le en texte brut.',
+    episodeTranscriptRaw: 'Ouvrir le transcript en texte brut',
 
     approachEyebrow: '01 / LE PODCAST',
     signalCaption: 'Un instantané du terrain, épisode après épisode.',
@@ -126,6 +135,7 @@ export const ui = {
     heroQuestion:
       'Honest conversations with the people living it. Hear what’s working, what isn’t, and what it means for teams, craft, and the future of being a developer.',
     heroCta: 'Watch All Episodes',
+    platformsLabel: 'Listen and watch on',
     heroMetaHosts: 'WITH ARTHUR MAGNE & YANNICK GRENZINGER',
     heroMetaClaim: 'FIELD REPORTS. TIPS. POST-MORTEMS.',
 
@@ -148,6 +158,14 @@ export const ui = {
     episodeWatchOnYoutube: 'Watch on YouTube',
     episodeBack: 'All episodes',
     episodeVideoFrame: 'YouTube video player',
+    episodeListenOn: 'Listen to the episode',
+    episodeGuest: 'Guest',
+    episodeArticleTitle: 'Episode highlights',
+    episodeArticleNote: 'The conversation is in French. This summary is an English adaptation.',
+    episodeTranscriptTitle: 'Full transcript',
+    episodeTranscriptNote:
+      'Automatic transcript of the conversation, in French. Select the text in the frame to copy it, or open it as plain text.',
+    episodeTranscriptRaw: 'Open the transcript as plain text',
 
     approachEyebrow: '01 / THE PODCAST',
     signalCaption: 'A snapshot of the field, one episode at a time.',
@@ -223,6 +241,11 @@ export function episodesPath(locale: Locale): string {
 /** Chemin d'une page épisode pour une langue. */
 export function episodePath(locale: Locale, slug: string): string {
   return `${episodesPath(locale)}${encodeURIComponent(slug)}/`;
+}
+
+/** Chemin du transcript brut d'un épisode, commun aux deux langues. */
+export function transcriptPath(slug: string): string {
+  return `${baseUrl()}episodes/${encodeURIComponent(slug)}/transcript.txt`;
 }
 
 /** Chemin d'un fichier de `public/`, préfixé par la base de déploiement. */
