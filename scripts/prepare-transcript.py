@@ -9,6 +9,10 @@ L'export de la Recording Room couvre tout l'enregistrement, y compris ce qui a
   4. corrige les noms propres et termes techniques mal transcrits (glossaires),
   5. fusionne les répliques consécutives d'un même intervenant.
 
+Dans le glossaire d'épisode, la clé spéciale "__speakers__" renomme les
+intervenants (ex. {"Alexandra": "Alexandra Zakharova"}), et une correction vers
+"" supprime une réplique parasite entière (ex. "Tcha-tcha-la !").
+
 Usage :
   python3 scripts/prepare-transcript.py export.csv --start "Bonjour à tous" \
       --glossary src/content/episodes/<slug>/glossary.json \
@@ -45,11 +49,13 @@ def fmt_ts(seconds: float) -> str:
 
 
 def load_glossary(paths):
-    rules = {}
+    rules, speakers = {}, {}
     for path in paths:
         if path and Path(path).exists():
-            rules.update(json.loads(Path(path).read_text(encoding='utf-8')))
-    return rules
+            data = json.loads(Path(path).read_text(encoding='utf-8'))
+            speakers.update(data.pop('__speakers__', {}))
+            rules.update(data)
+    return rules, speakers
 
 
 def apply_glossary(text: str, rules: dict) -> str:
@@ -80,14 +86,17 @@ def main():
     rows = [r for r in rows if parse_ts(r['Timestamp']) >= offset - 0.01]
     rows.sort(key=lambda r: parse_ts(r['Timestamp']))
 
-    rules = load_glossary([GLOBAL_GLOSSARY, args.glossary])
+    rules, speakers = load_glossary([GLOBAL_GLOSSARY, args.glossary])
     blocks = []  # [timestamp, speaker, [phrases]]
     for r in rows:
         text = r['Transcript'].strip()
         if not args.keep_noise and NOISE.match(text):
             continue
-        text = apply_glossary(text, rules)
+        text = apply_glossary(text, rules).strip()
+        if not text:  # réplique vidée par le glossaire (bruit propre à l'épisode)
+            continue
         speaker = r['Speaker'].strip()
+        speaker = speakers.get(speaker, speaker)
         if blocks and blocks[-1][1] == speaker:
             blocks[-1][2].append(text)
         else:

@@ -53,6 +53,11 @@ applique les corrections et fusionne les répliques d'un même intervenant.
 - `src/content/episodes/<slug>/glossary.json` : corrections propres à l'épisode
   (nom de l'invité, entreprises, personnes citées). Le constituer en lisant le CSV
   en entier : les noms propres sont presque toujours mal transcrits.
+  Clé spéciale `"__speakers__": {"Alexandra": "Alexandra Zakharova"}` pour renommer
+  un intervenant mal nommé dans Zencastr ; une correction vers `""` supprime une
+  réplique parasite entière (« Tcha-tcha-la ! », « Titi. »).
+- Si l'épisode n'a pas été coupé au début, `--start` reprend simplement la première
+  phrase du CSV (« Bonjour à toutes »).
 
 ## 3. Rédiger l'article
 
